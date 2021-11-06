@@ -1,163 +1,162 @@
-.home-container{
-    .home-content{
-        padding: 40px;
-        .home-banner-container{
-            // box-shadow: -2px -1px 9px 0px #808080a6;
-            border: 1px solid #dbd5d5;
-            background-color: #ffff;
-            border-radius: 20px;
-            margin-bottom: 35px;
-            .home-banner{
-                img{
-                    padding: 3px;
-                    border-radius: 20px 20px 0 0;
-                    width: 100%;
-                    padding-top: 13px;
-                }
-            }
-
+.home-container {
+  .home-content {
+    padding: 40px;
+    .home-banner-container {
+      // box-shadow: -2px -1px 9px 0px #808080a6;
+      border: 1px solid #dbd5d5;
+      background-color: #ffff;
+      border-radius: 20px;
+      width: 97%;
+      margin: auto;
+      margin-bottom: 35px;
+      .home-banner {
+        img {
+          padding: 3px;
+          border-radius: 20px 20px 0 0;
+          width: 100%;
+          padding-top: 13px;
         }
-        .banner-footer{
-            text-align: center;
-            padding: 30px 0;
-            .jadu-title{
-                font-size: 40px;
-                font-weight: 700;
-                margin: auto;
-                margin-bottom: 23px;
-                display: flex;
-                justify-content: center;
-                width: fit-content;
-                position: relative;
-                .do-span{
-                    color: #6f177b;
-                    margin-right: 10px;
-                }
-                .jadu-span{
-                    color: #4d4ab3;
-                }
-                .arrow-right-icon{
-                    font-size: 61px;
-                    position: absolute;
-                    right: -24%;
-                    top: -20px;
-                    color: #6f177b;
-                }
-            }
-            .footer-content{
-                padding: 0 10px;
-                .upper-content{
-                    color: #71177b;
-                    font-weight: 700;
-                }
-                .bottom-content{
-                    color: #6f1877;
-                    margin: 10px 0;
-                    // font-weight: 700;
-                }
-            }
-        }
-        .jadu-options-container{
-            .option-div{
-                background: white;
-                border-radius: 20px;
-                padding: 25px 15px;
-                margin: 25px;
-                // box-shadow: -2px -1px 9px 0px #808080a6;
-                border: 1px solid #dbd5d5;
-                img{
-                    width: 125px;
-                    border-radius: 10px;
-                }
-                .option-tab{
-                    text-align: center;
-                    .sponsor-div{
-                        position: relative;
-                       .option{
-                           max-height: 58px;
-                       }
-                        img{
-                            position: relative;
-                            top: 29px;
-                            top: -4px;
-                            left: 18px;
-                            border-radius: 50%;
-                            width: 75px;
-                        }
-                        
-                    }
-                    .option{
-                        cursor: pointer;
-                        background: #6f177b;
-                        padding: 15px 20px;
-                        border-radius: 50px;
-                        text-align: center;
-                        display: flex;
-                        align-items: center;
-                        .title{
-                            display: inline-block;
-                            overflow-wrap: break-word;
-                            width: 95%;
-                            color: #ffff;
-                            font-weight: 700;
-                            text-transform: uppercase;
-                            font-size: 14px;
-                        }
-                        .icon-span{
-                            svg{
-                                color: white;
-                            }
-                        }
-                  
-                    }
-                   
-                    
-                }
-                .options-situation{
-                    margin: 10px 0;
-                    color: #a464de;
-                    text-align: center;
-                }
-            }
-            .view-more{
-                color: #fea01c;
-                cursor: pointer;
-                text-align: center;
-                font-weight: 700;
-            }
-        }
+      }
     }
+    .banner-footer {
+      text-align: center;
+      padding: 30px 0;
+      .jadu-title {
+        font-size: 40px;
+        font-weight: 700;
+        margin: auto;
+        margin-bottom: 23px;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        position: relative;
+        .do-span {
+          color: #6f177b;
+          margin-right: 10px;
+        }
+        .jadu-span {
+          color: #4d4ab3;
+        }
+        .arrow-right-icon {
+          font-size: 61px;
+          position: absolute;
+          right: -24%;
+          top: -20px;
+          color: #6f177b;
+        }
+      }
+      .footer-content {
+        padding: 0 10px;
+        .upper-content {
+          color: #71177b;
+          font-weight: 700;
+        }
+        .bottom-content {
+          color: #6f1877;
+          margin: 10px 0;
+          // font-weight: 700;
+        }
+      }
+    }
+    .jadu-options-container {
+      .option-div {
+        background: white;
+        border-radius: 20px;
+        padding: 25px 15px;
+        margin: 25px auto;
+        width: 95%;
+        // box-shadow: -2px -1px 9px 0px #808080a6;
+        border: 1px solid #dbd5d5;
+        img {
+          width: 125px;
+          border-radius: 10px;
+        }
+        .option-tab {
+          text-align: center;
+          .sponsor-div {
+            position: relative;
+            position: relative;
+            .option {
+              max-height: 58px;
+              display: flex;
+              align-items: center;
+              padding-left: 60px;
+            }
+            img {
+              position: absolute;
+              // top: 29px;
+              // top: -4px;
+              left: 10px;
+              border-radius: 50%;
+              width: 55px;
+            }
+          }
+          .option {
+            cursor: pointer;
+            background: #6f177b;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            .title {
+              display: inline-block;
+              overflow-wrap: break-word;
+              width: 95%;
+              color: #ffff;
+              font-weight: 700;
+              text-transform: uppercase;
+              font-size: 14px;
+            }
+            .icon-span {
+              svg {
+                color: white;
+              }
+            }
+          }
+        }
+        .options-situation {
+          margin: 10px 0;
+          color: #a464de;
+          text-align: center;
+        }
+      }
+      .view-more {
+        color: #fea01c;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  }
 }
 
-
 @media only screen and (max-width: 598px) {
-    .home-container
-    {
-        .home-content{
-            .jadu-options-container{
-                .option-div{
-                    img{
-                        width: auto;
-                    }
-                }
-            }
+  .home-container {
+    .home-content {
+      .jadu-options-container {
+        .option-div {
+          img {
+            width: auto;
+          }
         }
-    } 
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 425px) {
-    .home-container
-    {
-        .home-content{
-            padding: 40px 20px;
-            .jadu-options-container{
-                .option-div{
-                    margin: 25px 0;
-                    img{
-                        width: auto;
-                    }
-                }
-            }
+  .home-container {
+    .home-content {
+      padding: 40px 20px;
+      .jadu-options-container {
+        .option-div {
+          margin: 25px 0;
+          img {
+            width: auto;
+          }
         }
-    } 
+      }
+    }
+  }
 }

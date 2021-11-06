@@ -9,7 +9,7 @@
   box-shadow: 0 0 7px #dbdbdb;
   width: 80%;
   text-align: center;
-  height: 160px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +43,7 @@
 .card-box-wrapper .card-box p {
   font-size: 15px;
   color: #6f177b;
-  width: 80%;
+  width: 90%;
   text-transform: uppercase;
   font-weight: 600;
   margin: auto;
@@ -74,12 +74,20 @@
   background-image: url("../../../../assets/video-list-bg.png");
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  /* overflow-y: hidden; */
+  padding: 20px 0;
+  width: 100%;
+}
+.card-box-wrapper .card-box .video-items marquee {
+  width: 100%;
+  background: red;
+  z-index: 999;
 }
 .card-box-wrapper .card-box .video-items .video-thumbnail {
   width: 100px;
   position: relative;
   background: #fff;
+  z-index: 9;
   margin-right: 5px;
   display: flex;
   align-items: center;

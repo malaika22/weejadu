@@ -1,0 +1,131 @@
+.career-growth-wrapper {
+  min-height: 100vh;
+}
+.career-growth-wrapper .career-growth {
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+}
+.career-growth-wrapper .career-growth h2 {
+  color: #6f177b;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.career-growth-wrapper .career-growth .career-growth-points {
+  width: 400px;
+  max-width: 95%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.career-growth-wrapper .career-growth .career-growth-points img {
+  width: 100%;
+}
+.career-growth-wrapper
+  .career-growth
+  .career-growth-points
+  .career-growth-point {
+  position: absolute;
+}
+.career-growth-wrapper
+  .career-growth
+  .career-growth-points
+  .career-growth-point
+  h5 {
+  font-size: 12px;
+}
+.career-growth-wrapper
+  .career-growth
+  .career-growth-points
+  .career-growth-point
+  p {
+  font-size: 11px;
+}
+.career-growth-wrapper .career-growth .career-growth-points .advisory {
+  color: #59b2a7;
+  top: 40px;
+  left: 90px;
+}
+.career-growth-wrapper .career-growth .career-growth-points .consultative {
+  color: #7c304b;
+  top: 85px;
+  right: 100px;
+}
+.career-growth-wrapper .career-growth .career-growth-points .presuasive {
+  color: #f8c670;
+  top: 125px;
+  left: 20px;
+}
+.career-growth-wrapper .career-growth .career-growth-points .negotiation {
+  color: #6eaee8;
+  top: 170px;
+}
+.career-growth-wrapper .career-growth h4 {
+  color: #6f177b;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.career-growth-wrapper .career-growth .search-box {
+  border: 1px solid #6f177b;
+  padding: 8px;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.career-growth-wrapper .career-growth .search-box input {
+  border: none;
+  padding-left: 10px;
+  color: #6f177b;
+  background: transparent;
+  font-size: 14px;
+}
+.career-growth-wrapper .career-growth .search-box input::placeholder {
+  color: #be9adf;
+}
+.career-growth-wrapper .career-growth .search-box button {
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  background: #6f177b;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+}
+.career-growth-wrapper .career-growth .search-box button svg {
+  width: 20px;
+}
+.career-growth-wrapper .career-growth .career-thumbnail {
+  border: 2px solid #6f177b;
+  margin: 0 10px;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+@media screen and (min-width: 1680px) {
+  .career-growth-wrapper .career-growth {
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 763px) {
+  .career-growth-wrapper .career-growth h2 {
+    font-size: 20px;
+  }
+  .career-growth-wrapper .career-growth h4 {
+    font-size: 16px;
+  }
+}

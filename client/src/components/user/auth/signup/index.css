@@ -1,0 +1,190 @@
+.signup-wrapper {
+  min-height: 100vh !important;
+}
+.signup-wrapper .signup {
+  background: #6f177b;
+  width: 420px;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 40px 30px;
+  padding-bottom: 20px;
+}
+.signup-wrapper .signup h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.signup-wrapper .signup label {
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.signup-wrapper .signup .input-wrapper {
+  position: relative;
+  display: flex;
+  width: 98%;
+  margin: auto;
+  align-items: center;
+}
+.signup-wrapper .signup .MuiGrid-grid-md-6 .input-wrapper {
+  width: 96%;
+}
+.signup-wrapper .signup .input-wrapper svg {
+  position: absolute;
+  width: 20px;
+  left: 8px;
+  color: #6f76bb;
+}
+.signup-wrapper .signup .input-wrapper .password-switch {
+  right: 20px;
+  left: auto;
+  cursor: pointer;
+}
+
+.signup-wrapper .signup .input-wrapper .PhoneInput {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  /* padding: 9px 10px; */
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+.signup-wrapper .signup .input-wrapper .PhoneInput input {
+  padding: 0 5px;
+  margin: 0;
+  border-left: 1px solid #d3d3d3;
+  border-radius: 0;
+  margin-left: 5px;
+}
+.signup-wrapper .signup .input-wrapper input,
+.signup-wrapper .signup .input-wrapper select {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 13px;
+  color: #be9adf;
+  padding: 10px;
+  padding-left: 35px;
+}
+.signup-wrapper .signup .input-wrapper select {
+  color: #be9adf;
+  padding-left: 30px;
+}
+.signup-wrapper .signup .input-wrapper input::placeholder {
+  color: #be9adf;
+  font-size: 13px;
+}
+
+.signup-wrapper .signup button {
+  background: #fea01a;
+  color: #fff;
+  border-radius: 20px;
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  font-size: 14px;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.signup-wrapper .signup button:hover {
+  background: #ff9500;
+}
+.signup-wrapper .signup p {
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  width: 96%;
+  margin: 5px auto;
+}
+.signup-wrapper .signup p input {
+  /* display: inline-block; */
+  margin: 3px 8px;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  float: left;
+}
+.signup-wrapper .signup p span {
+  float: left;
+  width: 85%;
+}
+.signup-wrapper .signup p a {
+  color: #fea01a;
+  font-weight: 600;
+}
+
+.signup-wrapper .signup .signup-with {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.signup-wrapper .signup .signup-with b {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.signup-wrapper .signup .signup-with span {
+  float: left;
+  width: 35px;
+  border-radius: 50px;
+  height: 35px;
+  color: #fff;
+  padding: 0 !important;
+  transition: 0.4s all;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.signup-wrapper .signup .signup-with span.fb {
+  background: #375299;
+}
+.signup-wrapper .signup .signup-with span.ggl {
+  background: #ee4735;
+}
+.signup-wrapper .signup .signup-with span.ln {
+  background: #0e72a2;
+}
+.signup-wrapper .signup .signup-with span.ggl svg {
+  width: 18px;
+  height: 18px;
+}
+.signup-wrapper .signup .signup-with span:hover {
+  background: #fff;
+  color: #6f177b;
+}
+@media screen and (max-width: 763px) {
+  .signup-wrapper .signup .input-wrapper {
+    width: 100% !important;
+  }
+  .signup-wrapper .signup p input {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1780px) {
+  .signup-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+  }
+}

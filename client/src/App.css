@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+*{
+  box-sizing: border-box;
+}
+*,
+button {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif !important ;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+::placeholder {
+  color: #414141;
+  font-size: 14px;
+}
+body {
+  min-height: 95%;
+  background: #f5f5f5;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.MuiGrid-container {
+  justify-content: center;
+}
+.transition {
+  transition: 0.5s all !important;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}
+.custom-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #ebebeb;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #dadada;
+}
+#root {
+  min-height: 100vh;
+}
+.bg-wrapper-1 {
+  min-height: 100vh;
+  background-image: url(assets/body-background-1.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.bg-wrapper-2 {
+  min-height: 100vh;
+  background-image: url(assets/body-background-2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@media screen and (max-width: 991px) {
+  #root {
+    background-position: right;
+  }
+}
+.PhoneInputCountrySelectArrow {
+  display: block;
+  content: "";
+  width: var(--PhoneInputCountrySelectArrow-width) !important;
+  height: var(--PhoneInputCountrySelectArrow-width) !important;
+  margin-left: var(--PhoneInputCountrySelectArrow-marginLeft) !important;
+  border-style: solid !important;
+  border-color: var(--PhoneInputCountrySelectArrow-color) !important;
+  border-top-width: 0 !important;
+  border-bottom-width: var(
+    --PhoneInputCountrySelectArrow-borderWidth
+  ) !important;
+  border-left-width: 0 !important;
+  border-right-width: var(
+    --PhoneInputCountrySelectArrow-borderWidth
+  ) !important;
+  transform: var(--PhoneInputCountrySelectArrow-transform) !important;
+  opacity: var(--PhoneInputCountrySelectArrow-opacity) !important;
+}

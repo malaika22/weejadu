@@ -1,0 +1,74 @@
+.verify-email-wrapper {
+  min-height: 100vh;
+}
+.verify-email-wrapper .verify-email {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0;
+  overflow: hidden;
+  /* margin-bottom: 10px; */
+}
+.verify-email-wrapper .verify-email h2 {
+  color: #6f177b;
+  font-size: 42px;
+}
+
+.verify-email-wrapper .verify-email p {
+  width: 280px;
+  margin: auto;
+  font-size: 16px;
+  color: #b482e0;
+}
+
+.verify-email-wrapper .verify-email img {
+  margin: auto;
+  display: block;
+}
+
+.verify-email-wrapper .verify-email a {
+  background: #6f177b;
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto;
+  width: 320px;
+  font-size: 14px;
+  transition: 0.4s all;
+}
+.verify-email-wrapper .verify-email a:hover {
+  background: #4e0e57;
+}
+.verify-email-wrapper .verify-email label {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #6f177b;
+  font-weight: 600;
+}
+
+.verify-email-wrapper .verify-email button {
+  background: #fea01a;
+  width: 150px;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  transition: 0.4s all;
+  margin-bottom: 20px;
+}
+.verify-email-wrapper .verify-email button:hover {
+  background: #ff9500;
+}
+@media screen and (min-width: 1480px) {
+  .verify-email {
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

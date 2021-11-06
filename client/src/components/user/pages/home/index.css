@@ -1,0 +1,161 @@
+.card-box-wrapper {
+  padding: 0 20px;
+  /* z-index: 999; */
+}
+.card-box-wrapper .card-box {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 7px #dbdbdb;
+  width: 80%;
+  text-align: center;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 35px 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.card-box-wrapper .card-box h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #6f177b;
+  width: 80%;
+  margin: 5px auto;
+}
+
+.card-box-wrapper .card-box h4 {
+  font-size: 18px;
+  width: 80%;
+  margin: 5px auto;
+  color: #e96823;
+  font-weight: 600;
+}
+.card-box-wrapper .card-box h4 a {
+  color: inherit;
+  position: unset;
+  text-decoration: underline;
+}
+
+.card-box-wrapper .card-box p {
+  font-size: 15px;
+  color: #6f177b;
+  width: 80%;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: auto;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.card-box-wrapper .card-box h6 {
+  font-size: 14px;
+  color: #cbade7;
+  font-weight: 400;
+}
+.card-box-wrapper .card-box .side-image {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: -15px;
+}
+.card-box-wrapper .card-box .side-image video {
+  cursor: pointer;
+  width: 100%;
+}
+.card-box-wrapper .card-box .video-items {
+  margin-top: 15px;
+  background-image: url("../../../../assets/video-list-bg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+.card-box-wrapper .card-box .video-items .video-thumbnail {
+  width: 100px;
+  position: relative;
+  background: #fff;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.card-box-wrapper .card-box .video-items .video-thumbnail svg {
+  color: #6f177b;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.card-box-wrapper .card-box .video-items .video-thumbnail img {
+  width: 100%;
+}
+.card-box-wrapper .signup-text-wrapper {
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 15px 0;
+}
+.card-box-wrapper .signup-text-wrapper a {
+  color: #e96823;
+  margin-left: 5px;
+}
+.card-box-wrapper .card-box a {
+  position: absolute;
+  bottom: 60px;
+  z-index: 99;
+}
+.card-box-wrapper .card-box a button {
+  background: #6f177b;
+  padding: 10px 10px;
+  min-width: 220px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  transition: 0.4s all;
+}
+.card-box-wrapper .card-box a button:hover {
+  background: #4d0e55;
+}
+.card-box-wrapper .card-box a button svg {
+  position: absolute;
+  right: 10px;
+}
+.card-box-wrapper .card-box a.other-jadu button {
+  background: #fea01a;
+}
+
+.card-box-wrapper .card-box a.other-jadu button:hover {
+  background: #ff9501;
+}
+
+@media screen and (max-width: 763px) {
+  .card-box-wrapper .card-box {
+    width: 95%;
+    height: auto;
+  }
+  .card-box-wrapper .card-box .side-image {
+    width: 40%;
+  }
+  .card-box-wrapper .button-wrapper {
+    position: unset;
+  }
+}
+@media screen and (min-width: 1480px) {
+  .card-box-wrapper {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

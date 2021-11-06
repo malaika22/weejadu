@@ -1,0 +1,154 @@
+.create-profile-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+.create-profile-wrapper .create-profile {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1480px) {
+  .create-profile-wrapper .create-profile {
+    min-height: 75vh;
+    display: flex;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+.create-profile-wrapper .create-profile h2 {
+  color: #65177b;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.create-profile-wrapper .create-profile p {
+  color: #a564de;
+  font-size: 15px;
+}
+.create-profile-wrapper .create-profile .options-wrapper {
+  width: 80%;
+  margin: 5px auto;
+  display: none;
+}
+.create-profile-wrapper .create-profile .options-wrapper.active {
+  display: block;
+}
+.create-profile-wrapper .create-profile .options-wrapper button {
+  display: block;
+  border: 1px solid #65177b !important;
+  color: #65177b;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 15px;
+  background: transparent;
+  position: relative;
+  margin: 20px 0;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.create-profile-wrapper .create-profile .options-wrapper button:hover {
+  background: #65177b;
+  color: #fff;
+}
+.create-profile-wrapper .create-profile .options-wrapper .option {
+  display: block;
+  border: 1px solid #65177b;
+  color: #65177b;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 15px;
+  background: transparent;
+  position: relative;
+  margin: 20px 0;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.create-profile-wrapper .create-profile .options-wrapper .option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.create-profile-wrapper .create-profile .options-wrapper .option .checkmark {
+  width: 100%;
+  min-width: 280px;
+  padding: 12px 0;
+  transition: 0.3s all;
+  display: inline-block;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  justify-content: center;
+}
+.create-profile-wrapper
+  .create-profile
+  .options-wrapper
+  .option
+  .checkmark
+  img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.create-profile-wrapper
+  .create-profile
+  .options-wrapper
+  .option:hover
+  input
+  ~ .checkmark {
+  background: #65177b;
+  color: #fff;
+}
+
+.create-profile-wrapper
+  .create-profile
+  .options-wrapper
+  .option
+  input:checked
+  ~ .checkmark {
+  background: #65177b;
+  color: #fff;
+}
+
+.create-profile-wrapper .create-profile .selection-wrapper {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.create-profile-wrapper .create-profile .next {
+  background: #65177b;
+  color: #fff;
+  padding: 12px 100px;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+.create-profile-wrapper .create-profile .selection-wrapper button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #65177b;
+}
+.create-profile-wrapper .create-profile .selection-wrapper button svg {
+  width: 100px;
+  height: 60px;
+}

@@ -1,0 +1,53 @@
+.splash-screen {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.splash-screen .logo-box img {
+  width: 180px;
+}
+.splash-screen .key-points {
+  width: 60%;
+}
+@media screen and (max-width: 763px) {
+  .splash-screen .key-points {
+    width: 90%;
+  }
+}
+.splash-screen .key-points .item {
+  text-align: center;
+  color: #a664e0;
+  padding: 15px 0;
+  font-weight: 600;
+}
+.owl-theme .owl-dots .owl-dot span {
+  background: transparent !important;
+  border: 1px solid #6f177b !important;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #6f177b !important;
+}
+.splash-screen .start-now {
+  background: #fea01a;
+  color: #fff;
+  width: 150px;
+  padding: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 99;
+  border-radius: 10px;
+  margin-top: 30px;
+  display: inline-block;
+}
+.splash-screen .background {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,122 @@
+.login-wrapper {
+  /* min-height: 100vh; */
+  overflow: hidden;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.login-wrapper .login {
+  background: #6f177b;
+  width: 400px;
+  margin: 30px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 40px 30px;
+  padding-bottom: 20px;
+}
+.login-wrapper .login h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login-wrapper .login label {
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.login-wrapper .login span {
+  display: block;
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+  font-size: 12px;
+}
+.login-wrapper .login .input-wrapper .PhoneInput {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  /* padding: 9px 10px; */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+}
+.login-wrapper .login .input-wrapper .PhoneInput input {
+  padding: 0 5px;
+  margin: 0;
+  border-left: 1px solid #d3d3d3;
+  border-radius: 0;
+  text-align: left;
+  margin-left: 5px;
+}
+.login-wrapper .login .input-wrapper {
+  position: relative;
+  display: flex;
+  width: 98%;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.login-wrapper .login input {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 13px;
+  padding-left: 35px;
+  color: #be9adf;
+  text-align: center;
+  padding: 12px;
+}
+.login-wrapper .login .input-wrapper svg {
+  position: absolute;
+  width: 20px;
+  left: 8px;
+  color: #be9adf;
+}
+.login-wrapper .login input::placeholder {
+  font-size: 13px;
+  color: #be9adf;
+  font-weight: 600;
+}
+
+.login-wrapper .login button {
+  background: #fea01a;
+  color: #fff;
+  border-radius: 20px;
+  display: block;
+  width: 60%;
+  margin: 20px auto;
+  font-size: 14px;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.login-wrapper .login button:hover {
+  background: #ff9500;
+}
+.login-wrapper .login p {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  margin: 10px 0;
+}
+.login-wrapper .login p a {
+  color: #fea01a;
+  font-weight: 600;
+}
+@media screen and (min-width: 1480px) {
+  .login-box {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+  }
+}

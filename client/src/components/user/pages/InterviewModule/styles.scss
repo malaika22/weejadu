@@ -2,6 +2,7 @@
     text-align: center;
     position: relative;
     .interview-container{
+        padding: 0 20px;
         .interview-header{
             
             .jadu-title{
@@ -71,9 +72,11 @@
                     color: #6b1576;
                 }
             }
-            .interview-div{
+            .interview-div-main{
                 margin-bottom: 29px;
                 margin-bottom: 29px;
+                box-shadow: 1px 1px 8px 4px #80808085;
+                border-radius: 20px;
                 .interview-header{
                     background: #6f177b;
                     padding: 10px;
@@ -110,6 +113,7 @@
                         border: 2px solid #6b1576;
                         border-radius: 20px;
                         min-height: 132px;
+                        margin-bottom: 20px;
                         img{
                             border-radius: 20px 0 0 20px;
                             height: 148px;

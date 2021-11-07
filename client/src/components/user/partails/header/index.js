@@ -5,6 +5,7 @@ import { Search, Close } from "@mui/icons-material";
 import Logo from "../../../../assets/logo.png";
 import BackArrowPurple from "../../../../assets/back-arrow-theme.png";
 import BackArrowWhite from "../../../../assets/back-arrow-white.png";
+import {useHistory} from "react-router-dom"
 import "./index.css";
 const Header = ({ image, arrow, color, link, func }) => {
   const [searhboxPreview, setsearhboxPreview] = useState(false);
@@ -14,6 +15,18 @@ const Header = ({ image, arrow, color, link, func }) => {
   const toggleFunction = () => {
     func();
   };
+
+
+  const history = useHistory()
+
+
+  const handleRoute = (e) => {
+    console.log("in select", e.target.value)
+    if(e.target.value === "interview"){
+      history.push("/jadu-interviews")
+
+    }
+  }
   return (
     <header>
       {arrow === "true" &&
@@ -54,10 +67,10 @@ const Header = ({ image, arrow, color, link, func }) => {
             <div
               className={searhboxPreview ? "search-box active" : "search-box"}
             >
-              <select>
+              <select onChange={handleRoute}>
                 <option>I want to improve in</option>
-                <option>
-                  <Link to="/jadu-interviews" >Interviews</Link>
+                <option value="interview"> 
+                  Interviews
                   </option>
                 <option>Career Choice</option>
                 <option>Bosss Interaction</option>

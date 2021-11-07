@@ -10,6 +10,7 @@ import Footer from "../../partails/footer/index";
 import InterviewHeader1 from "../../../../assets/interviewModule/interviewHeader1.jpg";
 import InterviewThumbnail from "../../../../assets/interviewModule/interviewThumbnail.jpg";
 import InterviewThumbnail2 from "../../../../assets/interviewModule/interviewThumbnail2.jpg";
+import { Link } from "react-router-dom";
 import './styles.scss'
 import { makeStyles } from "@mui/styles";
 import { Grid} from "@mui/material";
@@ -24,6 +25,7 @@ const useStyles = makeStyles({
 const InterviewModule = () => {
   const interviewData = [
     {
+      id: 1,
       title: "Interview competency-1 name",
       challenges: 10,
       level: 1,
@@ -41,6 +43,7 @@ const InterviewModule = () => {
       ],
     },
     {
+      id : 2,
       title: "Interview competency-2 name",
       challenges: 10,
       level: 1,
@@ -58,6 +61,7 @@ const InterviewModule = () => {
       ],
     },
     {
+      id : 3,
       title: "Interview competency-3 name",
       challenges: 10,
       level: 1,
@@ -75,6 +79,7 @@ const InterviewModule = () => {
       ],
     },
     {
+      id : 4,
       title: "Interview competency-4 name",
       challenges: 10,
       level: 1,
@@ -133,55 +138,57 @@ const InterviewModule = () => {
             <KeyboardArrowUpOutlined />
           </div>
           <Grid container className={classes.gridContainer}>
-            <Grid item md={6}>
+            <Grid item md={7}>
                 {interviewData
                   .slice(interviewLength, interviewLength + 2)
                   .map((interviewDetails) => (
-                    <div className="interview-div">
-                      <div className="interview-header">
-                        <Grid container className={classes.gridContainer}>
-                          <Grid item md={3}>
-                            <img
-                              src={InterviewHeader1}
-                              alt={interviewDetails.title}
-                            />
-                          </Grid>
-                          <Grid item md={9}>
-                            <div className="header-content">
-                              <div className="header-title">
-                                {interviewDetails?.title}
-                              </div>
-                              <div className="level-div">
-                                <span>{interviewDetails?.challenges} CHALLENGES</span>
-                                <span className="level">LEVEL - {interviewDetails?.level} </span>
-                              </div>
-                            </div>
-                          </Grid>
-                        </Grid>
-                      </div>
-                      <div className="interview-body">
-                        {interviewDetails.videoDetails.map((video) => (
-                          <div className="interview-div">
-                            <Grid container className={classes.gridContainer}>
-                              <Grid item md={3}>
-                                <img src={video?.img} title={video.videoTitle} />
-                              </Grid>
-                              <Grid item md={9}>
-                                <div className="video-content">
-                                  <div className="video-title">
-                                    {video?.videoTitle}
-                                  </div>
-                                  <div className="likes-count">
-                                    LIKES : {video.likes}
-                                  </div>
-                                </div>
-                              </Grid>
+                    <Link to={`/interview/${interviewDetails.id}`}>
+                      <div className="interview-div-main">
+                        <div className="interview-header">
+                          <Grid container className={classes.gridContainer}>
+                            <Grid item md={3}>
+                              <img
+                                src={InterviewHeader1}
+                                alt={interviewDetails.title}
+                              />
                             </Grid>
-                          </div>
-                        ))}
-                        <div className="load-more">Load more</div>
+                            <Grid item md={9}>
+                              <div className="header-content">
+                                <div className="header-title">
+                                  {interviewDetails?.title}
+                                </div>
+                                <div className="level-div">
+                                  <span>{interviewDetails?.challenges} CHALLENGES</span>
+                                  <span className="level">LEVEL - {interviewDetails?.level} </span>
+                                </div>
+                              </div>
+                            </Grid>
+                          </Grid>
+                        </div>
+                        <div className="interview-body">
+                          {interviewDetails.videoDetails.map((video) => (
+                            <div className="interview-div">
+                              <Grid container className={classes.gridContainer}>
+                                <Grid item md={3}>
+                                  <img src={video?.img} title={video.videoTitle} />
+                                </Grid>
+                                <Grid item md={9}>
+                                  <div className="video-content">
+                                    <div className="video-title">
+                                      {video?.videoTitle}
+                                    </div>
+                                    <div className="likes-count">
+                                      LIKES : {video.likes}
+                                    </div>
+                                  </div>
+                                </Grid>
+                              </Grid>
+                            </div>
+                          ))}
+                          <div className="load-more">Load more</div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
 
             </Grid>

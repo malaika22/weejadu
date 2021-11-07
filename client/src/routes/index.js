@@ -10,6 +10,7 @@ import VerifyEmail from "../components/user/auth/verifyEmail";
 import CareerGrowth from "../components/user/pages/careerGrowth";
 import HomeLayout from '../components/user/pages/homeLayout/HomeLayout'
 import InterviewModule from "../components/user/pages/InterviewModule";
+import InterviewSteps from "../components/user/pages/InterviewModule/InterviewSteps/index"
 
 const Routes = () => {
   return (
@@ -22,6 +23,7 @@ const Routes = () => {
           <Route exact path="/buildprofile" component={Profile} />
           <Route exact path="/home" component={HomeLayout} />
           <Route exact path="/jadu-interviews" component={InterviewModule} />
+          <Route exact path="/interview/:interviewId" component={InterviewSteps} />
           <Route exact path="/career-growth" component={CareerGrowth} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />

@@ -5,17 +5,17 @@ import { Grid } from "@mui/material";
 import "./styles.scss";
 import InterviewHome from "./InterviewHome/InterviewHome";
 import RecordVideo from "./RecordVideo/RecordVideo";
-import './styles.scss'
+import "./styles.scss";
 
 const InterviewSteps = () => {
   const [steps, setSteps] = useState(0);
-console.log('steps', steps)
+  console.log("steps", steps);
   const renderInterviewContent = () => {
     switch (steps) {
       case 0:
         return <InterviewHome setSteps={setSteps} steps={steps} />;
       case 1:
-        return <RecordVideo />
+        return <RecordVideo />;
       case 2:
         return <div>Enoji</div>;
       case 3:
@@ -26,7 +26,7 @@ console.log('steps', steps)
   };
   return (
     <div className="interview-steps-container bg-wrapper-2">
-      <Header image="true" arrow="true" link="/start" />
+      <Header image="true" arrow="true" link="/jadu-interviews" />
       <div className="interview-steps-section">
         <div className="interview-header">
           <div className="jadu-title">
@@ -43,7 +43,7 @@ console.log('steps', steps)
             <Grid item md={9} xs={12}>
               {renderInterviewContent()}
             </Grid>
-           </Grid>
+          </Grid>
         </div>
       </div>
     </div>

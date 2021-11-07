@@ -58,51 +58,13 @@
         }
       }
     }
-    // .jadu-options-container {
-    //   .option-div {
-    //     background: white;
-    //     border-radius: 20px;
-    //     padding: 25px 15px;
-    //     margin: 25px auto;
-    //     width: 95%;
-    //     // box-shadow: -2px -1px 9px 0px #808080a6;
-    //     border: 1px solid #dbd5d5;
-    //     img {
-    //       width: 125px;
-    //       border-radius: 10px;
-    //     }
-    //     .option-tab {
-    //       text-align: center;
-    //       .sponsor-div {
-    //         position: relative;
-    //         position: relative;
-    //         .option {
-    //           max-height: 58px;
-    //           display: flex;
-    //           align-items: center;
-    //           padding-left: 60px;
-    //         }
-    //         .footer-content{
-    //             padding: 0 10px;
-    //             .upper-content{
-    //                 color: #71177b;
-    //                 font-weight: 700;
-    //                 font-size: 20px;
-    //             }
-    //             .bottom-content{
-    //                 color: #6f1877;
-    //                 font-size: 18px;
-    //                 margin: 10px 0;
-    //                 font-weight: 600;
-    //             }
-    //         }
-    //     }
     .jadu-options-container {
       .option-div {
         background: white;
         border-radius: 20px;
         padding: 25px 15px;
-        margin: 25px;
+        margin: 25px auto;
+        width: 88%;
         // box-shadow: -2px -1px 9px 0px #808080a6;
         border: 1px solid #dbd5d5;
         img {
@@ -113,16 +75,20 @@
           text-align: center;
           .sponsor-div {
             position: relative;
+            position: relative;
             .option {
               max-height: 58px;
+              display: flex;
+              align-items: center;
+              padding-left: 60px;
             }
             img {
-              position: relative;
-              top: 29px;
-              top: -4px;
-              left: 18px;
+              position: absolute;
+              // top: 29px;
+              // top: -4px;
+              left: 10px;
               border-radius: 50%;
-              width: 75px;
+              width: 55px;
             }
           }
           .option {
@@ -133,7 +99,6 @@
             text-align: center;
             display: flex;
             align-items: center;
-            transition: all 0.3s linear;
             .title {
               display: inline-block;
               overflow-wrap: break-word;
@@ -148,28 +113,23 @@
                 color: white;
               }
             }
-            &:hover {
-              background-color: #5543af;
-            }
           }
         }
         .options-situation {
-          margin: 15px 0;
-          font-weight: 500;
+          margin: 10px 0;
           color: #a464de;
           text-align: center;
         }
       }
+      .view-more {
+        color: #fea01c;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+      }
     }
   }
-  .view-more {
-    color: #fea01c;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 700;
-  }
 }
-// }
 
 @media only screen and (max-width: 598px) {
   .home-container {

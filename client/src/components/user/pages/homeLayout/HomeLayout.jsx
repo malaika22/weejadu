@@ -45,7 +45,7 @@ const HomeLayout = () => {
   const classes = useStyles();
 
   return (
-    <div className="home-container bg-wrapper-1 ">
+    <div className="home-container bg-wrapper-2 ">
       <Header image="true" arrow="true" link="/start" />
       <div className="home-content">
         <Grid container>
@@ -71,42 +71,13 @@ const HomeLayout = () => {
               </div>
             </div>
           </Grid>
-        </Grid>
-        <div className="jadu-options-container">
-          <Grid container>
-            <Grid item md={6} sm={12}>
-              <div className="option-div">
-                <Grid container>
-                  <Grid item md={3} sm={3} xs={12} className={classes.gridItem}>
-                    <img src={OptionOne} alt="Sponsored Job Interview" />
-                  </Grid>
-                  <Grid item md={9} sm={9} xs={12}>
-                    <div className="option-tab">
-                      <div className="sponsor-div">
-                        <div className="option">
-                          <img src={Cadila} alt="Cadila" />
-                          <span className="title">Sponsered Job Interview</span>
-                          <span className="icon-span">
-                            <ArrowForwardIosOutlined />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div></div>
-
-                    <div className="options-situation">
-                      for Cadilla Medical Represeentatives
-                    </div>
-                  </Grid>
-                </Grid>
-              </div>
-            </Grid>
-            {window.innerWidth > 600 ? (
-              homeOptionsm.map((option) => (
+          <Grid md={10} xs={12}>
+            {" "}
+            <div className="jadu-options-container">
+              <Grid container>
                 <Grid item md={6} sm={12}>
                   <div className="option-div">
-                    <Grid container spacing={2}>
+                    <Grid container>
                       <Grid
                         item
                         md={3}
@@ -114,31 +85,71 @@ const HomeLayout = () => {
                         xs={12}
                         className={classes.gridItem}
                       >
-                        <img src={option?.image} alt={option?.title} />
+                        <img src={OptionOne} alt="Sponsored Job Interview" />
                       </Grid>
                       <Grid item md={9} sm={9} xs={12}>
                         <div className="option-tab">
-                          <div className="option">
-                            <span className="title">{option?.title}</span>
-                            <span className="icon-span">
-                              <ArrowForwardIosOutlined />
-                            </span>
+                          <div className="sponsor-div">
+                            <div className="option">
+                              <img src={Cadila} alt="Cadila" />
+                              <span className="title">
+                                Sponsered Job Interview
+                              </span>
+                              <span className="icon-span">
+                                <ArrowForwardIosOutlined />
+                              </span>
+                            </div>
                           </div>
-                          <div className="options-situation">
-                            {option?.situations} situations
-                          </div>
+                        </div>
+
+                        <div></div>
+
+                        <div className="options-situation">
+                          for Cadilla Medical Represeentatives
                         </div>
                       </Grid>
                     </Grid>
                   </div>
                 </Grid>
-              ))
-            ) : (
-              <></>
-            )}
+                {window.innerWidth > 600 ? (
+                  homeOptionsm.map((option) => (
+                    <Grid item md={6} sm={12}>
+                      <div className="option-div">
+                        <Grid container spacing={2}>
+                          <Grid
+                            item
+                            md={3}
+                            sm={3}
+                            xs={12}
+                            className={classes.gridItem}
+                          >
+                            <img src={option?.image} alt={option?.title} />
+                          </Grid>
+                          <Grid item md={9} sm={9} xs={12}>
+                            <div className="option-tab">
+                              <div className="option">
+                                <span className="title">{option?.title}</span>
+                                <span className="icon-span">
+                                  <ArrowForwardIosOutlined />
+                                </span>
+                              </div>
+                              <div className="options-situation">
+                                {option?.situations} situations
+                              </div>
+                            </div>
+                          </Grid>
+                        </Grid>
+                      </div>
+                    </Grid>
+                  ))
+                ) : (
+                  <></>
+                )}
+              </Grid>
+              <div className="view-more">View All</div>
+            </div>
           </Grid>
-          <div className="view-more">View All</div>
-        </div>
+        </Grid>
       </div>
     </div>
   );

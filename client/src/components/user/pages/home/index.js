@@ -61,102 +61,100 @@ const Home = () => {
             <div className="card-box">
               <p>Take challenges and respond to situations</p>
               <h6>win iphone &amp; laptops</h6>
-              <Marquee
-                className="video-items"
-                pauseOnHover={true}
-                gradient={false}
-              >
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail1} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail2} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail3} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail4} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail5} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail1} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail2} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail3} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail4} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail5} alt="" />
-                </div>
-              </Marquee>
+              <div className="video-items">
+                <Marquee pauseOnHover={true} gradient={false}>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail1} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail2} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail3} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail4} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail5} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail1} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail2} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail3} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail4} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail5} alt="" />
+                  </div>
+                </Marquee>
+              </div>
               <Link to="/home">
                 <Button>
                   do jadu <ChevronRight />
@@ -168,102 +166,100 @@ const Home = () => {
             <div className="card-box">
               <p>Explore - how other responded to situations</p>
               <h6>and improve your skills</h6>
-              <Marquee
-                className="video-items"
-                pauseOnHover={true}
-                gradient={false}
-              >
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail1} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail2} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail3} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail4} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail5} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail1} alt="" />
-                </div>{" "}
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail2} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail3} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail4} alt="" />
-                </div>
-                <div
-                  className="video-thumbnail"
-                  onClick={() => {
-                    showPlayerHandle();
-                  }}
-                >
-                  <PlayCircle />
-                  <img src={videoThumbnail5} alt="" />
-                </div>
-              </Marquee>
+              <div className="video-items">
+                <Marquee pauseOnHover={true} gradient={false}>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail1} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail2} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail3} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail4} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail5} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail1} alt="" />
+                  </div>{" "}
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail2} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail3} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail4} alt="" />
+                  </div>
+                  <div
+                    className="video-thumbnail"
+                    onClick={() => {
+                      showPlayerHandle();
+                    }}
+                  >
+                    <PlayCircle />
+                    <img src={videoThumbnail5} alt="" />
+                  </div>
+                </Marquee>
+              </div>
               <Link to="/buildprofile" className="other-jadu">
                 <Button>
                   see other's jadu

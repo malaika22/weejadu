@@ -49,11 +49,13 @@
                 .upper-content{
                     color: #71177b;
                     font-weight: 700;
+                    font-size: 20px;
                 }
                 .bottom-content{
                     color: #6f1877;
+                    font-size: 18px;
                     margin: 10px 0;
-                    // font-weight: 700;
+                    font-weight: 600;
                 }
             }
         }
@@ -94,6 +96,7 @@
                         text-align: center;
                         display: flex;
                         align-items: center;
+                        transition: all 0.3s linear;
                         .title{
                             display: inline-block;
                             overflow-wrap: break-word;
@@ -108,13 +111,16 @@
                                 color: white;
                             }
                         }
-                  
+                        &:hover{
+                            background-color: #5543AF;
+                        }
                     }
                    
                     
                 }
                 .options-situation{
-                    margin: 10px 0;
+                    margin: 15px 0;
+                    font-weight: 500;
                     color: #a464de;
                     text-align: center;
                 }

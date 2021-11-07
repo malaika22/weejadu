@@ -56,7 +56,9 @@ const Header = ({ image, arrow, color, link, func }) => {
             >
               <select>
                 <option>I want to improve in</option>
-                <option>Interviews</option>
+                <option>
+                  <Link to="/jadu-interviews" >Interviews</Link>
+                  </option>
                 <option>Career Choice</option>
                 <option>Bosss Interaction</option>
               </select>

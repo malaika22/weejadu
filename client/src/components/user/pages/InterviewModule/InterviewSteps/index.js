@@ -5,7 +5,9 @@ import { Grid } from "@mui/material";
 import "./styles.scss";
 import InterviewHome from "./InterviewHome/InterviewHome";
 import RecordVideo from "./RecordVideo/RecordVideo";
+import AvatarAudio from "../InterviewSteps/AvatarAudio/AvatarAudio";
 import "./styles.scss";
+import CartoonText from "./CartoonText/CartoonText";
 
 const InterviewSteps = () => {
   const [steps, setSteps] = useState(0);
@@ -17,9 +19,9 @@ const InterviewSteps = () => {
       case 1:
         return <RecordVideo />;
       case 2:
-        return <div>Enoji</div>;
+        return <AvatarAudio />;
       case 3:
-        return <div>Step 3</div>;
+        return <CartoonText />;
       default:
         <></>;
     }

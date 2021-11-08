@@ -1,0 +1,28 @@
+.avatar-image {
+  img {
+    width: 200px;
+  }
+}
+
+.suggestion-title {
+  color: #691573;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.suggestion-div {
+  width: 80%;
+  border: 2px solid #6f177d;
+  height: 108px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: auto;
+  .suggestion {
+    color: #38383a;
+    font-weight: 500;
+    span {
+      color: #ff0204;
+    }
+  }
+}

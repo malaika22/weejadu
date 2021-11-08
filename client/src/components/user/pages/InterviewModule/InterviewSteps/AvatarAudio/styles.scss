@@ -1,0 +1,114 @@
+.avatar-audio-container {
+  .avatar-div {
+    text-align: center;
+    .avatar-content {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 25px;
+      margin-bottom: 40px;
+      box-shadow: 1px 1px 8px 4px #80808085;
+      .avatar-header {
+        .avatar-title {
+          color: #e60f0d;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 30px;
+        }
+        img {
+          border-radius: 20px;
+        }
+        .image-div {
+          margin: auto;
+          text-align: center;
+          img {
+            border-radius: 20px;
+            width: 321px;
+            margin: auto;
+          }
+        }
+      }
+
+      .build-avatar {
+        color: #6c1677;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0;
+        margin-top: 30px;
+      }
+      .record-time {
+        text-align: center;
+        font-size: 18px;
+        color: #71167d;
+        font-weight: 500;
+      }
+      .buttons-div {
+        margin-top: 10px;
+        button {
+          border: none;
+          background: #6b1576;
+          width: 200px;
+          padding: 15px 0;
+          border-radius: 20px;
+          color: white;
+          font-weight: 600;
+          margin: 20px 0;
+        }
+      }
+      .terms-conditions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        .agreement-div {
+          font-weight: 500;
+          color: #70167a;
+          span {
+            color: #fea01a;
+          }
+        }
+      }
+      .upload-button {
+        border: none;
+        background: #fea01a;
+        width: 210px;
+        padding: 15px 0;
+        border-radius: 25px;
+        color: white;
+        font-weight: 700;
+        margin: 20px 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .saved-jadu-container {
+    background: #6f177b;
+    border-radius: 40px 40px 0 0;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    .saved-header {
+      font-size: 20px;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 23px;
+    }
+    svg {
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .expert-div {
+      margin: 0 9px;
+      img {
+        border-radius: 20px;
+      }
+      p {
+        color: white;
+        font-weight: 500;
+        margin: 10px 0;
+      }
+    }
+  }
+}

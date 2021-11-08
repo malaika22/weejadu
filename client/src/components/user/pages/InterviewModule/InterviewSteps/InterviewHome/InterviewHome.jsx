@@ -15,17 +15,16 @@ import ExpertThree from "../../../../../../assets/interviewModule/expertThree.jp
 import { makeStyles } from "@mui/styles";
 import "./styles.scss";
 
-
 const useStyles = makeStyles({
-    gridContainer : {
-      alignItems : "center"
-    }
-})
+  gridContainer: {
+    alignItems: "center",
+  },
+});
 const InterviewHome = ({ setSteps, steps }) => {
-  const classes = useStyles()
-    const handleSteps  = () => {
-        setSteps(steps+1)
-    }
+  const classes = useStyles();
+  const handleSteps = () => {
+    setSteps(steps + 1);
+  };
   return (
     <div className="interview-home-container">
       <div className="video-container">
@@ -38,15 +37,14 @@ const InterviewHome = ({ setSteps, steps }) => {
           </Grid>
           <Grid item md={5} xs={12}>
             <div className="story-info-div">
-            <div className="story-title">INTERVIEW STORY TELLING</div>
-            <div className="story-info">
-              More specificaly, you can use storytelling in interviews to bring
-              a revelant experience to life, share what you learned from itm and
-              convey something about you that you want the interviewer to
-              appreciate and remember.
+              <div className="story-title">INTERVIEW STORY TELLING</div>
+              <div className="story-info">
+                More specificaly, you can use storytelling in interviews to
+                bring a revelant experience to life, share what you learned from
+                itm and convey something about you that you want the interviewer
+                to appreciate and remember.
+              </div>
             </div>
-            </div>
-           
           </Grid>
           <Grid item md={5} xs={12}>
             <div className="share-container">
@@ -83,18 +81,22 @@ const InterviewHome = ({ setSteps, steps }) => {
       </div>
       <div className="response-container">
         <div className="response-header">I WANT TO RESPOND BY : </div>
-        <div className="response-button" onClick={handleSteps}>RECORD OWN VIDEO</div>
-        <div className="response-button">RECORD AUDIO WITH AVATAR</div>
-        <div className="response-button">TEXT TYPED INTO CATROON TEMPLATE</div>
+        <div className="response-button" onClick={handleSteps}>
+          RECORD OWN VIDEO
+        </div>
+        <div className="response-button" onClick={() => setSteps(2)}>
+          RECORD AUDIO WITH AVATAR
+        </div>
+        <div className="response-button" onClick={() => setSteps(3)}>
+          TEXT TYPED INTO CATROON TEMPLATE
+        </div>
       </div>
 
       <div className="expert-videos">
         <div className="expert-header">EXPERT JADU VIDEOS</div>
-        <Grid container className={classes.gridContainer} >
-          
+        <Grid container className={classes.gridContainer}>
           <Grid item md={1} xs={12}>
-
-        <ArrowBackIos />
+            <ArrowBackIos />
           </Grid>
           <Grid item md={3.3} xs={12}>
             <div className="expert-div">
@@ -115,10 +117,8 @@ const InterviewHome = ({ setSteps, steps }) => {
             </div>
           </Grid>
           <Grid item md={1} xs={12}>
-        <ArrowForwardIos />
-
+            <ArrowForwardIos />
           </Grid>
-          
         </Grid>
       </div>
     </div>

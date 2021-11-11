@@ -14,6 +14,7 @@ import SavedThumbnailThree from "../../../../../../assets/interviewModule/savedT
 import Disclaimer from "../../../../../../assets/interviewModule/disclaimer.jpg";
 import { makeStyles } from "@mui/styles";
 import "./styles.scss";
+import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -24,65 +25,79 @@ const useStyles = makeStyles({
   },
 });
 
-const RecordVideo = () => {
+const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
   const [toggleState, setToggleState] = useState(false);
+  const [uploadState, setUploadState] = useState(false);
+  const [checkStatus, setCheckStatus] = useState(false);
   const classes = useStyles();
   return (
     <div className="record-video-container">
-      <div className="record-title">RECORD YOUR VIDEO</div>
-      <div className="video-div">
-        <img src={RecordVideoIcon} alt="Record video" />
-      </div>
-      <div className="allowed-time">
-        MAX RECORD TIME ALLOWED : 02:00 minutes
-      </div>
-      <Grid container>
-        <Grid item md={4} sm={12} xs={12}>
-          <button className="record-buttons">PREVIEW</button>
-        </Grid>
-        <Grid item md={4} sm={12} xs={12}>
-          <button className="record-buttons">SAVE FOR LATE</button>
-        </Grid>
-        <Grid item md={4} sm={12} xs={12}>
-          <button className="record-buttons">DISCARD</button>
-        </Grid>
-      </Grid>
+      {previewVideo ? (
+        <>
+          <div className="record-title">RECORD YOUR VIDEO {`>`} PREVIEW</div>
+          <div className="video-div">
+            <iframe
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              title="shark"
+            ></iframe>
+          </div>
+          <div className="allowed-time">
+            MAX RECORD TIME ALLOWED : 02:00 minutes
+          </div>
+          <Grid container spacing={2}>
+            <Grid item md={6} sm={12} xs={12}>
+              <button className="record-buttons">SAVE FOR LATE</button>
+            </Grid>
+            <Grid item md={6} sm={12} xs={12}>
+              <button className="record-buttons">DISCARD</button>
+            </Grid>
+          </Grid>
+        </>
+      ) : (
+        <>
+          <div className="record-title">RECORD YOUR VIDEO</div>
+          <div className="video-div">
+            <img src={RecordVideoIcon} alt="Record video" />
+          </div>
+          <div className="allowed-time">
+            MAX RECORD TIME ALLOWED : 02:00 minutes
+          </div>
+          <Grid container>
+            <Grid item md={4} sm={12} xs={12}>
+              <button
+                className="record-buttons"
+                onClick={() => setPreviewVideo(true)}
+              >
+                PREVIEW
+              </button>
+            </Grid>
+            <Grid item md={4} sm={12} xs={12}>
+              <button className="record-buttons">SAVE FOR LATE</button>
+            </Grid>
+            <Grid item md={4} sm={12} xs={12}>
+              <button className="record-buttons">DISCARD</button>
+            </Grid>
+          </Grid>
+        </>
+      )}
+
       <div className="terms-conditions">
-        <Checkbox />
+        <Checkbox
+          onChange={() => setCheckStatus(!checkStatus)}
+          className={`${uploadState && !checkStatus ? `error` : ``}`}
+        />
         <div className="agreement-div">
           I agree to have read the -{" "}
           <span onClick={() => setToggleState(!toggleState)}>Disclamier</span>{" "}
         </div>
       </div>
-      <button className="upload-button">UPLOAD THIS VIDEO</button>
+      <button className="upload-button" onClick={() => setUploadState(true)}>
+        UPLOAD THIS VIDEO
+      </button>
       <div className="saved-jadu-container">
-        <div className="saved-header">MY SAVED JADU'S</div>
-        <Grid container alignItems="center">
-          <Grid item md={1} xs={12}>
-            <ArrowBackIos />
-          </Grid>
-          <Grid item md={3.3} xs={12}>
-            <div className="expert-div">
-              <img src={SavedThumbnailOne} alt="expert" />
-              <p>Interview story-telling</p>
-            </div>
-          </Grid>
-          <Grid item md={3.3} xs={12}>
-            <div className="expert-div">
-              <img src={SavedThumbnailTwo} alt="expert" />
-              <p>Sales Power words</p>
-            </div>
-          </Grid>
-          <Grid item md={3.3} xs={12}>
-            <div className="expert-div">
-              <img src={SavedThumbnailThree} alt="expert" />
-              <p>Super Rapport building</p>
-            </div>
-          </Grid>
-          <Grid item md={1} xs={12}>
-            <ArrowForwardIos />
-          </Grid>
-        </Grid>
+        <VideoCarousel title="MY SAVED JADU'S" />
       </div>
       <SwipeableDrawer
         anchor="bottom"

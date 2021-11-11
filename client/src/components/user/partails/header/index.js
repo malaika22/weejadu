@@ -5,9 +5,13 @@ import { Search, Close } from "@mui/icons-material";
 import Logo from "../../../../assets/logo.png";
 import BackArrowPurple from "../../../../assets/back-arrow-theme.png";
 import BackArrowWhite from "../../../../assets/back-arrow-white.png";
-import {useHistory} from "react-router-dom"
+import { useHistory, useLocation, useParams } from "react-router-dom";
 import "./index.css";
 const Header = ({ image, arrow, color, link, func }) => {
+  const location = useLocation();
+  const optionType = location.pathname.split("/")[1];
+  console.log(optionType);
+  const history = useHistory();
   const [searhboxPreview, setsearhboxPreview] = useState(false);
   const searchBoxHandler = () => {
     setsearhboxPreview(!searhboxPreview);
@@ -16,17 +20,39 @@ const Header = ({ image, arrow, color, link, func }) => {
     func();
   };
 
-
-  const history = useHistory()
-
-
-  const handleRoute = (e) => {
-    console.log("in select", e.target.value)
-    if(e.target.value === "interview"){
-      history.push("/jadu-interviews")
-
+  const renderSelectOptions = () => {
+    console.log(optionType);
+    switch (optionType) {
+      case "jadu-interviews":
+        return (
+          <select onChange={handleRoute}>
+            <option value="" disabled selected>
+              Inteviews
+            </option>
+            <option value="interview">Memorability</option>
+            <option>Enthusiasm</option>
+            <option>Achievement orientation</option>
+          </select>
+        );
+      default:
+        return (
+          <select onChange={handleRoute}>
+            <option value="" disabled selected>
+              I want to improve in
+            </option>
+            <option value="interview">Interviews</option>
+            <option>Career Choice</option>
+            <option>Bosss Interaction</option>
+          </select>
+        );
     }
-  }
+  };
+  const handleRoute = (e) => {
+    console.log("in select", e.target.value);
+    if (e.target.value === "interview") {
+      history.push("/jadu-interviews");
+    }
+  };
   return (
     <header>
       {arrow === "true" &&
@@ -67,14 +93,7 @@ const Header = ({ image, arrow, color, link, func }) => {
             <div
               className={searhboxPreview ? "search-box active" : "search-box"}
             >
-              <select onChange={handleRoute}>
-                <option>I want to improve in</option>
-                <option value="interview"> 
-                  Interviews
-                  </option>
-                <option>Career Choice</option>
-                <option>Bosss Interaction</option>
-              </select>
+              {renderSelectOptions()}
             </div>
           </div>
         </Grid>

@@ -18,6 +18,7 @@ import SavedThumbnailTwo from "../../../../../../assets/interviewModule/savedThu
 import SavedThumbnailThree from "../../../../../../assets/interviewModule/savedThumbnailThree.jpg";
 import "./styles.scss";
 import PreviewAudio from "./PreviewAudio/PreviewAudio";
+import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -28,9 +29,10 @@ const useStyles = makeStyles({
   },
 });
 
-const AvatarAudio = () => {
+const AvatarAudio = ({ previewAudio, setPreviewAudio }) => {
   const [toggleState, setToggleState] = useState(false);
-  const [previewAudio, setPreviewAudio] = useState(false);
+  //const [previewAudio, setPreviewAudio] = useState(false);
+  const [uploadState, setUploadState] = useState(false);
   const classes = useStyles();
   return (
     <div className="avatar-audio-container">
@@ -84,7 +86,7 @@ const AvatarAudio = () => {
           )}
 
           <div className="terms-conditions">
-            <Checkbox />
+            <Checkbox className={`${uploadState ? `selected` : ``}`} />
             <div className="agreement-div">
               I agree to have read the -{" "}
               <span onClick={() => setToggleState(!toggleState)}>
@@ -92,36 +94,12 @@ const AvatarAudio = () => {
               </span>{" "}
             </div>
           </div>
-          <button className="upload-button">UPLOAD THIS VIDEO</button>
+          <button className="upload-button" onClick={() => uploadState(true)}>
+            UPLOAD THIS VIDEO
+          </button>
         </div>
         <div className="saved-jadu-container">
-          <div className="saved-header">MY SAVED JADU'S</div>
-          <Grid container alignItems="center">
-            <Grid item md={1} xs={12}>
-              <ArrowBackIos />
-            </Grid>
-            <Grid item md={3.3} xs={12}>
-              <div className="expert-div">
-                <img src={SavedThumbnailOne} alt="expert" />
-                <p>Interview story-telling</p>
-              </div>
-            </Grid>
-            <Grid item md={3.3} xs={12}>
-              <div className="expert-div">
-                <img src={SavedThumbnailTwo} alt="expert" />
-                <p>Sales Power words</p>
-              </div>
-            </Grid>
-            <Grid item md={3.3} xs={12}>
-              <div className="expert-div">
-                <img src={SavedThumbnailThree} alt="expert" />
-                <p>Super Rapport building</p>
-              </div>
-            </Grid>
-            <Grid item md={1} xs={12}>
-              <ArrowForwardIos />
-            </Grid>
-          </Grid>
+          <VideoCarousel title="My Saved Jadu's" />
         </div>
       </div>
 

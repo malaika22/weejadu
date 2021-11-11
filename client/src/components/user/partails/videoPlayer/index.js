@@ -3,7 +3,7 @@ import "./index.css";
 import ReactPlayer from "react-player";
 import { Close } from "@mui/icons-material";
 import VideoThumb from "../../../../assets/video.mp4";
-const VideoPlayer = ({ toggle }) => {
+const VideoPlayer = ({ toggle, link }) => {
   function handleHide() {
     toggle();
   }

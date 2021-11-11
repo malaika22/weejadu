@@ -95,6 +95,24 @@ const InterviewModule = () => {
         },
       ],
     },
+    {
+      id: 5,
+      title: "Interview competency-5 name",
+      challenges: 10,
+      level: 1,
+      videoDetails: [
+        {
+          img: InterviewThumbnail,
+          videoTitle: "Convinving your parents on your career choice",
+          likes: 1279,
+        },
+        {
+          img: InterviewThumbnail2,
+          videoTitle: "Convinving your parents on your career choice",
+          likes: 1279,
+        },
+      ],
+    },
   ];
 
   const classes = useStyles();
@@ -106,7 +124,10 @@ const InterviewModule = () => {
       .map((detail) => console.log(detail))
   );
   const handleShowMore = () => {
-    setInterviewLength(interviewLength + 1);
+    console.log("interview length", interviewLength);
+    if (interviewLength < interviewData.length - 2) {
+      setInterviewLength(interviewLength + 1);
+    }
   };
 
   const handleShowLess = () => {
@@ -132,7 +153,7 @@ const InterviewModule = () => {
           </div>
         </div>
         <div className="interview-content">
-          <div onClick={handleShowMore} className="show-more">
+          <div onClick={handleShowLess} className="show-more">
             <KeyboardArrowUpOutlined />
           </div>
           <Grid container className={classes.gridContainer}>
@@ -140,7 +161,9 @@ const InterviewModule = () => {
               {interviewData
                 .slice(interviewLength, interviewLength + 2)
                 .map((interviewDetails) => (
-                  <Link to={`/interview/${interviewDetails.id}`}>
+                  <Link
+                    to={`/jadu-interviews/interview/${interviewDetails.id}`}
+                  >
                     <div className="interview-div-main">
                       <div className="interview-header">
                         <Grid container className={classes.gridContainer}>
@@ -170,7 +193,7 @@ const InterviewModule = () => {
                       <div className="interview-body">
                         <Grid container>
                           {interviewDetails.videoDetails.map((video) => (
-                            <Grid item md={6} xs={12}>
+                            <Grid item md={6} xs={12} className="grid-item">
                               <div className="interview-div">
                                 <Grid
                                   container
@@ -204,7 +227,7 @@ const InterviewModule = () => {
                 ))}
             </Grid>
           </Grid>
-          <div className="show-less" onClick={handleShowLess}>
+          <div className="show-less" onClick={handleShowMore}>
             <KeyboardArrowDownOutlined />
           </div>
         </div>

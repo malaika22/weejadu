@@ -10,10 +10,11 @@
   color: #6f177b;
   text-transform: uppercase;
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .career-growth-wrapper .career-growth .career-growth-points {
-  width: 400px;
+  width: 100%;
   max-width: 95%;
   margin: 20px auto;
   display: flex;
@@ -46,22 +47,22 @@
 }
 .career-growth-wrapper .career-growth .career-growth-points .advisory {
   color: #59b2a7;
-  top: 40px;
-  left: 90px;
+  top: 20%;
+  left: 22%;
 }
 .career-growth-wrapper .career-growth .career-growth-points .consultative {
   color: #7c304b;
-  top: 85px;
-  right: 100px;
+  top: 49%;
+  right: 20%;
 }
 .career-growth-wrapper .career-growth .career-growth-points .presuasive {
   color: #f8c670;
-  top: 125px;
-  left: 20px;
+  top: 58%;
+  left: 5%;
 }
 .career-growth-wrapper .career-growth .career-growth-points .negotiation {
   color: #6eaee8;
-  top: 170px;
+  top: 76%;
 }
 .career-growth-wrapper .career-growth h4 {
   color: #6f177b;
@@ -71,7 +72,7 @@
 .career-growth-wrapper .career-growth .search-box {
   border: 1px solid #6f177b;
   padding: 8px;
-  width: 300px;
+  width: 80%;
   max-width: 100%;
   margin: 0 auto;
   border-radius: 30px;
@@ -121,11 +122,44 @@
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .career-growth-wrapper .career-growth h4 {
+    margin-top: 20px;
+  }
+}
 @media screen and (max-width: 763px) {
   .career-growth-wrapper .career-growth h2 {
     font-size: 20px;
   }
   .career-growth-wrapper .career-growth h4 {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .career-growth-wrapper
+    .career-growth
+    .career-growth-points
+    .career-growth-point
+    h5 {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .career-growth-wrapper
+    .career-growth
+    .career-growth-points
+    .career-growth-point
+    h5 {
+    font-size: 9px;
+  }
+  .career-growth-wrapper
+    .career-growth
+    .career-growth-points
+    .career-growth-point
+    p {
+    font-size: 9px;
   }
 }

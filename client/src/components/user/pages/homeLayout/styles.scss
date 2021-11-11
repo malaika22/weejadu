@@ -9,6 +9,7 @@
       width: 97%;
       margin: auto;
       margin-bottom: 35px;
+      margin-top: 37px;
       .home-banner {
         img {
           padding: 3px;
@@ -59,6 +60,35 @@
       }
     }
     .jadu-options-container {
+      .options-container {
+        position: relative;
+        margin-top: 11px;
+      }
+      .show-more {
+        position: absolute;
+        text-align: center;
+        left: 44%;
+        top: -60px;
+        cursor: pointer;
+        svg {
+          font-size: 80px;
+          color: #6b1576;
+        }
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+      .show-less {
+        text-align: center;
+        cursor: pointer;
+        svg {
+          font-size: 80px;
+          color: #6b1576;
+        }
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+      }
       .option-div {
         background: white;
         border-radius: 20px;
@@ -67,6 +97,26 @@
         width: 88%;
         // box-shadow: -2px -1px 9px 0px #808080a6;
         border: 1px solid #dbd5d5;
+        margin-bottom: 9px;
+
+        .clock-video-div {
+          position: relative;
+          svg {
+            position: absolute;
+            left: 29%;
+            top: 19%;
+            font-size: 51px;
+            color: black;
+            @media only screen and (max-width: 599px) {
+              font-size: 200px;
+            }
+          }
+          .lock-image {
+            width: 100%;
+            height: auto;
+            opacity: 0.6;
+          }
+        }
         img {
           width: 125px;
           border-radius: 10px;
@@ -126,6 +176,11 @@
         cursor: pointer;
         text-align: center;
         font-weight: 700;
+        margin: 20px;
+        display: none;
+        @media only screen and (max-width: 900px) {
+          display: block;
+        }
       }
     }
   }

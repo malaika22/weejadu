@@ -15,10 +15,9 @@ import SavedThumbnailTwo from "../../../../../../assets/interviewModule/savedThu
 import SavedThumbnailThree from "../../../../../../assets/interviewModule/savedThumbnailThree.jpg";
 import "./styles.scss";
 import InterviewType from "./InterviewType/InterviewType";
+import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 
-const CartoonText = () => {
-  const [interviewType, setInterviewType] = useState("");
-  console.log("interview type", interviewType);
+const CartoonText = ({ interviewType, setInterviewType }) => {
   return (
     <div className="cartoon-text-container">
       {!interviewType ? (
@@ -32,7 +31,7 @@ const CartoonText = () => {
             </div>
           </div>
           <div className="cartoon-text-body">
-            <Grid container spacing={3}>
+            <Grid container>
               <Grid item md={12} xs={12}>
                 <KeyboardArrowUpOutlined className="arrow-icon" />
               </Grid>
@@ -67,40 +66,14 @@ const CartoonText = () => {
                 <KeyboardArrowDownOutlined className="arrow-icon" />
               </Grid>
             </Grid>
+            <div className="saved-jadu-container">
+              <VideoCarousel title="My Saved Jadu's" />
+            </div>
           </div>
         </>
       ) : (
         <InterviewType />
       )}
-      <div className="saved-jadu-container">
-        <div className="saved-header">MY SAVED JADU'S</div>
-        <Grid container alignItems="center">
-          <Grid item md={1} xs={12}>
-            <ArrowBackIos />
-          </Grid>
-          <Grid item md={3.3} xs={12}>
-            <div className="expert-div">
-              <img src={SavedThumbnailOne} alt="expert" />
-              <p>Interview story-telling</p>
-            </div>
-          </Grid>
-          <Grid item md={3.3} xs={12}>
-            <div className="expert-div">
-              <img src={SavedThumbnailTwo} alt="expert" />
-              <p>Sales Power words</p>
-            </div>
-          </Grid>
-          <Grid item md={3.3} xs={12}>
-            <div className="expert-div">
-              <img src={SavedThumbnailThree} alt="expert" />
-              <p>Super Rapport building</p>
-            </div>
-          </Grid>
-          <Grid item md={1} xs={12}>
-            <ArrowForwardIos />
-          </Grid>
-        </Grid>
-      </div>
     </div>
   );
 };

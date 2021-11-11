@@ -13,6 +13,7 @@ import ExpertOne from "../../../../../../assets/interviewModule/expertOne.jpg";
 import ExpertTwo from "../../../../../../assets/interviewModule/expertTwo.jpg";
 import ExpertThree from "../../../../../../assets/interviewModule/expertThree.jpg";
 import { makeStyles } from "@mui/styles";
+import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 import "./styles.scss";
 
 const useStyles = makeStyles({
@@ -27,58 +28,67 @@ const InterviewHome = ({ setSteps, steps }) => {
   };
   return (
     <div className="interview-home-container">
-      <div className="video-container">
-        <div className="video-div">
-          <img src={InterviewVideo} alt="video" />
-        </div>
-        <Grid container className={classes.gridContainer}>
-          <Grid item md={2} xs={12}>
-            <img src={InterviewIcon} alt="interview" s />
-          </Grid>
-          <Grid item md={5} xs={12}>
-            <div className="story-info-div">
-              <div className="story-title">INTERVIEW STORY TELLING</div>
-              <div className="story-info">
-                More specificaly, you can use storytelling in interviews to
-                bring a revelant experience to life, share what you learned from
-                itm and convey something about you that you want the interviewer
-                to appreciate and remember.
-              </div>
+      <Grid container spacing={2}>
+        <Grid item md={6} xs={12}>
+          <div className="video-container">
+            <div className="video-div">
+              <img src={InterviewVideo} alt="video" />
             </div>
-          </Grid>
-          <Grid item md={5} xs={12}>
-            <div className="share-container">
-              <div className="icon-div">
-                <FavoriteSharp />
-                <span>120K</span>
-              </div>
-              <div className="icon-div">
-                <Telegram />
-                <span>SHARE</span>
-              </div>
-              <div className="icon-div">
-                <SaveAlt />
-                <span>SAVE</span>
-              </div>
-            </div>
-            <button>SUBSCRIBE</button>
-          </Grid>
+            <Grid container className={classes.gridContainer}>
+              <Grid item md={2} xs={12}>
+                <img src={InterviewIcon} alt="interview" />
+              </Grid>
+              <Grid item md={10} xs={12}>
+                <div className="story-info-div">
+                  <div className="story-title">INTERVIEW STORY TELLING</div>
+                  <div className="story-info">
+                    More specificaly, you can use storytelling in interviews to
+                    bring a revelant experience to life, share what you learned
+                    from itm and convey something about you that you want the
+                    interviewer to appreciate and remember.
+                  </div>
+                </div>
+              </Grid>
+              <Grid item md={12} xs={12}>
+                <div className="share-container">
+                  <div className="icon-div">
+                    <FavoriteSharp />
+                    <span>120K</span>
+                  </div>
+                  <div className="icon-div">
+                    <Telegram />
+                    <span>SHARE</span>
+                  </div>
+                  <div className="icon-div">
+                    <SaveAlt />
+                    <span>SAVE</span>
+                  </div>
+                </div>
+                <button>SUBSCRIBE</button>
+              </Grid>
+            </Grid>
+          </div>
         </Grid>
-      </div>
-      <div className="enhance-container">
-        <div className="enchance-options">
-          <div className="enhance-title">YOU'LL ENHANC : </div>
-          <p>use of power words linked to desired role, </p>
-          <p>Memorability, Enthusiam</p>
-        </div>
-        <div className="enchance-options">
-          <div className="enhance-title">JADU'S LEFT TO NEXT LEVEL : 05</div>
-        </div>
-        <div className="enchance-options">
-          <div className="enhance-title">ON COMPLETION OF THIS LEVEL</div>
-          <p>Win - Persuasive skills course from - john Maxwell</p>
-        </div>
-      </div>
+        <Grid item md={6} xs={12}>
+          <div className="enhance-container">
+            <div className="enchance-options">
+              <div className="enhance-title">YOU'LL ENHANCE : </div>
+              <p>use of power words linked to desired role, </p>
+              <p>Memorability, Enthusiam</p>
+            </div>
+            <div className="enchance-options">
+              <div className="enhance-title">
+                JADU'S LEFT TO NEXT LEVEL : 05
+              </div>
+            </div>
+            <div className="enchance-options">
+              <div className="enhance-title">ON COMPLETION OF THIS LEVEL</div>
+              <p>Win - Persuasive skills course from - john Maxwell</p>
+            </div>
+          </div>
+        </Grid>
+      </Grid>
+
       <div className="response-container">
         <div className="response-header">I WANT TO RESPOND BY : </div>
         <div className="response-button" onClick={handleSteps}>
@@ -92,7 +102,8 @@ const InterviewHome = ({ setSteps, steps }) => {
         </div>
       </div>
 
-      <div className="expert-videos">
+      <VideoCarousel title="EXPERT JADU VIDEOS" />
+      {/* <div className="expert-videos">
         <div className="expert-header">EXPERT JADU VIDEOS</div>
         <Grid container className={classes.gridContainer}>
           <Grid item md={1} xs={12}>
@@ -120,7 +131,7 @@ const InterviewHome = ({ setSteps, steps }) => {
             <ArrowForwardIos />
           </Grid>
         </Grid>
-      </div>
+      </div> */}
     </div>
   );
 };

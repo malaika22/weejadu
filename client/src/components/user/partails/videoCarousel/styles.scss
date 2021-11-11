@@ -1,0 +1,70 @@
+.carousel-container {
+  .expert-videos {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    .expert-header {
+      font-size: 20px;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 23px;
+    }
+    .owl-carousel {
+      width: 90%;
+      margin: auto;
+      .owl-nav {
+        .owl-prev {
+          position: absolute;
+          font-size: 89px;
+          color: white;
+          top: 20%;
+          left: -50px;
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
+        .owl-next {
+          position: absolute;
+          font-size: 89px;
+          color: white;
+          top: 20%;
+          right: -50px;
+        }
+      }
+      .expert-div {
+        .image-overlay {
+          background: #6f177b;
+          border-radius: 20px;
+          svg {
+            position: absolute;
+            top: 33%;
+            font-size: 68px;
+            left: 41%;
+            opacity: 1;
+            z-index: 999999;
+            background: #6f177b;
+            border-radius: 50%;
+            border: 1px solid #6f177b;
+          }
+          img {
+            opacity: 1;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+          }
+          &:hover img {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    .owl-theme .owl-nav [class*="owl-"]:hover {
+      background-color: transparent;
+    }
+    .carousel-footer {
+      color: #ffa018;
+      margin-top: 20px;
+      padding: 15px 0;
+      font-weight: 600;
+    }
+  }
+}

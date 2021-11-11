@@ -58,7 +58,7 @@ const Home = () => {
             </div>
           </Grid>
           <Grid item md={6} xs={12}>
-            <div className="card-box">
+            <div className="card-box bottom-card">
               <p>Take challenges and respond to situations</p>
               <h6>win iphone &amp; laptops</h6>
               <div className="video-items">
@@ -163,7 +163,7 @@ const Home = () => {
             </div>
           </Grid>
           <Grid item md={6} xs={12}>
-            <div className="card-box">
+            <div className="card-box bottom-card">
               <p>Explore - how other responded to situations</p>
               <h6>and improve your skills</h6>
               <div className="video-items">

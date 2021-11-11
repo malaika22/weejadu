@@ -47,6 +47,11 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    .error {
+      svg {
+        color: #eb2e2e;
+      }
+    }
     .agreement-div {
       font-weight: 500;
       color: #70167a;
@@ -65,11 +70,13 @@
     font-weight: 700;
     margin: 20px 0;
     cursor: pointer;
+    margin-bottom: 45px;
   }
   .saved-jadu-container {
     background: #6f177b;
     border-radius: 40px 40px 0 0;
     padding: 20px 0 20px 0;
+    padding-bottom: 0;
     .saved-header {
       font-size: 20px;
       color: white;

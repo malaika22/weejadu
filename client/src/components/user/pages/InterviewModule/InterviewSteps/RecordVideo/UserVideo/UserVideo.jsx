@@ -26,6 +26,7 @@ const useStyles = makeStyles({
 
 const UserVideo = () => {
   const [toggleState, setToggleState] = useState(false);
+  const [uploadState, setUploadState] = useState(false);
   const classes = useStyles();
   return (
     <div className="record-video-container">
@@ -48,7 +49,7 @@ const UserVideo = () => {
         </Grid>
       </Grid>
       <div className="terms-conditions">
-        <Checkbox />
+        <Checkbox className={`${uploadState ? `selected` : ``}`} />
         <div className="agreement-div">
           I agree to have read the -{" "}
           <span onClick={() => setToggleState(!toggleState)}>Disclamier</span>{" "}

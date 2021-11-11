@@ -9,31 +9,17 @@ import OptionThree from "../../../../assets/home/optionThree.jpg";
 import OptionFour from "../../../../assets/home/optionFour.jpg";
 import OptionFive from "../../../../assets/home/optionFive.jpg";
 import Cadila from "../../../../assets/home/caldia.jpg";
-import { ArrowRight, ArrowForwardIosOutlined } from "@mui/icons-material";
+import {
+  ArrowRight,
+  ArrowForwardIosOutlined,
+  LockClock,
+  Lock,
+  KeyboardArrowUpOutlined,
+  KeyboardArrowDownOutlined,
+} from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import "./styles.scss";
-
-const optionsData = [
-  {
-    title: "JADU INTERVIEWS",
-    situations: "1214",
-    image: OptionTwo,
-  },
-  {
-    title: "jadu selling",
-    situations: 1350,
-    image: OptionThree,
-  },
-  {
-    title: "jadu boss interactions",
-    situations: "2350",
-    image: OptionFour,
-  },
-  {
-    title: "jadu parent covincing",
-    situations: "5650",
-    image: OptionFive,
-  },
-];
+import Footer from "../../partails/footer";
 
 const useStyles = makeStyles({
   gridItem: {
@@ -41,15 +27,50 @@ const useStyles = makeStyles({
   },
 });
 const HomeLayout = () => {
-  const [homeOptionsm, setHomeOptions] = useState([...optionsData]);
+  const optionsData = [
+    {
+      route: "jadu-interviews",
+      title: "JADU INTERVIEWS",
+      situations: "1214",
+      image: OptionTwo,
+    },
+    {
+      title: "jadu selling",
+      situations: 1350,
+      image: OptionThree,
+    },
+    {
+      title: "jadu boss interactions",
+      situations: "2350",
+      image: OptionFour,
+    },
+    {
+      title: "jadu parent covincing",
+      situations: "5650",
+      image: OptionFive,
+    },
+  ];
+  // const [homeOptionsm, setHomeOptions] = useState([...optionsData]);
+  const [homeOptionsLength, setHomeOptionsLength] = useState(0);
   const classes = useStyles();
+  const handleShowMore = () => {
+    console.log("interview length", optionsData);
+    if (homeOptionsLength < optionsData.length - 2) {
+      setHomeOptionsLength(homeOptionsLength + 1);
+    }
+  };
 
+  const handleShowLess = () => {
+    if (homeOptionsLength > 0) {
+      setHomeOptionsLength(homeOptionsLength - 1);
+    }
+  };
   return (
     <div className="home-container bg-wrapper-2 ">
       <Header image="true" arrow="true" link="/start" />
       <div className="home-content">
         <Grid container>
-          <Grid item md={10} xs={12}>
+          <Grid item md={6} xs={12}>
             <div className="home-banner-container">
               <div className="home-banner">
                 <img src={HomeBanner} alt="Home banner" />
@@ -71,86 +92,103 @@ const HomeLayout = () => {
               </div>
             </div>
           </Grid>
-          <Grid md={10} xs={12}>
+          <Grid md={6} xs={12}>
             {" "}
             <div className="jadu-options-container">
-              <Grid container>
-                <Grid item md={6} sm={12}>
-                  <div className="option-div">
-                    <Grid container>
-                      <Grid
-                        item
-                        md={3}
-                        sm={3}
-                        xs={12}
-                        className={classes.gridItem}
-                      >
-                        <img src={OptionOne} alt="Sponsored Job Interview" />
-                      </Grid>
-                      <Grid item md={9} sm={9} xs={12}>
-                        <div className="option-tab">
-                          <div className="sponsor-div">
-                            <div className="option">
-                              <img src={Cadila} alt="Cadila" />
-                              <span className="title">
-                                Sponsered Job Interview
-                              </span>
-                              <span className="icon-span">
-                                <ArrowForwardIosOutlined />
-                              </span>
-                            </div>
+              <div className="options-container">
+                <div onClick={handleShowLess} className="show-more">
+                  <KeyboardArrowUpOutlined />
+                </div>
+                <Grid container>
+                  <Grid item md={12} sm={12}>
+                    <div className="option-div">
+                      <Grid container>
+                        <Grid
+                          item
+                          md={3}
+                          sm={3}
+                          xs={12}
+                          className={classes.gridItem}
+                        >
+                          <div className="clock-video-div">
+                            <img
+                              src={OptionOne}
+                              alt="Sponsored Job Interview"
+                              className="lock-image"
+                            />
+                            <Lock />
                           </div>
-                        </div>
-
-                        <div></div>
-
-                        <div className="options-situation">
-                          for Cadilla Medical Represeentatives
-                        </div>
-                      </Grid>
-                    </Grid>
-                  </div>
-                </Grid>
-                {window.innerWidth > 600 ? (
-                  homeOptionsm.map((option) => (
-                    <Grid item md={6} sm={12}>
-                      <div className="option-div">
-                        <Grid container spacing={2}>
-                          <Grid
-                            item
-                            md={3}
-                            sm={3}
-                            xs={12}
-                            className={classes.gridItem}
-                          >
-                            <img src={option?.image} alt={option?.title} />
-                          </Grid>
-                          <Grid item md={9} sm={9} xs={12}>
-                            <div className="option-tab">
+                        </Grid>
+                        <Grid item md={9} sm={9} xs={12}>
+                          <div className="option-tab">
+                            <div className="sponsor-div">
                               <div className="option">
-                                <span className="title">{option?.title}</span>
+                                <img src={Cadila} alt="Cadila" />
+
+                                <span className="title">
+                                  Sponsered Job Interview
+                                </span>
                                 <span className="icon-span">
                                   <ArrowForwardIosOutlined />
                                 </span>
                               </div>
-                              <div className="options-situation">
-                                {option?.situations} situations
-                              </div>
                             </div>
-                          </Grid>
+                          </div>
+
+                          <div className="options-situation">
+                            for Cadilla Medical Represeentatives
+                          </div>
                         </Grid>
-                      </div>
-                    </Grid>
-                  ))
-                ) : (
-                  <></>
-                )}
-              </Grid>
-              <div className="view-more">View All</div>
+                      </Grid>
+                    </div>
+                  </Grid>
+                  {optionsData
+                    .slice(homeOptionsLength, homeOptionsLength + 2)
+                    .map((option) => (
+                      <Grid item md={12} sm={12}>
+                        <Link to={`/${option?.route}`}>
+                          <div className="option-div">
+                            <Grid container spacing={2}>
+                              <Grid
+                                item
+                                md={3}
+                                sm={3}
+                                xs={12}
+                                className={classes.gridItem}
+                              >
+                                <img src={option?.image} alt={option?.title} />
+                              </Grid>
+                              <Grid item md={9} sm={9} xs={12}>
+                                <div className="option-tab">
+                                  <div className="option">
+                                    <span className="title">
+                                      {option?.title}
+                                    </span>
+                                    <span className="icon-span">
+                                      <ArrowForwardIosOutlined />
+                                    </span>
+                                  </div>
+                                  <div className="options-situation">
+                                    {option?.situations} situations
+                                  </div>
+                                </div>
+                              </Grid>
+                            </Grid>
+                          </div>
+                        </Link>
+                      </Grid>
+                    ))}
+                </Grid>
+                <div className="show-less" onClick={handleShowMore}>
+                  <KeyboardArrowDownOutlined />
+                </div>
+                <div className="view-more">View All</div>
+              </div>
             </div>
           </Grid>
         </Grid>
       </div>
+      <Footer />
     </div>
   );
 };

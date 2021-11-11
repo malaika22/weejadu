@@ -421,7 +421,7 @@ const InterviewType = ({ title }) => {
                   style={{ backgroundColor: "#5662f6" }}
                 >
                   <Grid container>
-                    <Grid item md={9}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>
@@ -453,7 +453,7 @@ const InterviewType = ({ title }) => {
                   style={{ backgroundColor: "#af0303" }}
                 >
                   <Grid container>
-                    <Grid item md={12}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>

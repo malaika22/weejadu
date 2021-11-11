@@ -255,14 +255,14 @@ const InterviewType = ({ title }) => {
               </Grid>
             </Grid>
           ) : (
-            <Grid container>
-              <Grid item md={8}>
+            <Grid container spacing={2}>
+              <Grid item md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#29bbf6" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={8}>
@@ -288,12 +288,14 @@ const InterviewType = ({ title }) => {
                     </Grid>
                   </Grid>
                 </div>
+              </Grid>
+              <Grid item md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#29bbf6" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={8}>
@@ -319,12 +321,14 @@ const InterviewType = ({ title }) => {
                     </Grid>
                   </Grid>
                 </div>
+              </Grid>
+              <Grid item md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#7550f5" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>
@@ -349,12 +353,14 @@ const InterviewType = ({ title }) => {
                     </Grid>
                   </Grid>
                 </div>
+              </Grid>
+              <Grid md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#af0303" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>
@@ -378,12 +384,14 @@ const InterviewType = ({ title }) => {
                     </Grid>
                   </Grid>
                 </div>
+              </Grid>
+              <Grid item md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#8fd342" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>
@@ -406,12 +414,14 @@ const InterviewType = ({ title }) => {
                     </Grid>
                   </Grid>
                 </div>
+              </Grid>
+              <Grid item md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#5662f6" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={9}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>
@@ -436,12 +446,14 @@ const InterviewType = ({ title }) => {
                     </Grid>
                   </Grid>
                 </div>
+              </Grid>
+              <Grid item md={6} xs={12}>
                 <div
                   className="response-wrapper"
                   style={{ backgroundColor: "#af0303" }}
                 >
                   <Grid container>
-                    <Grid item md={6}>
+                    <Grid item md={12}>
                       <div className="response-div">
                         <Grid container className={classes.gridBorderItems}>
                           <Grid item md={12}>
@@ -472,13 +484,13 @@ const InterviewType = ({ title }) => {
         </div>
         <div className="response-footer">
           <Grid container>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <button>TRY ANOTHER JADU</button>
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <button>SEE OTHERS JADU</button>
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <button>MY USER JADUBOARD</button>
             </Grid>
           </Grid>

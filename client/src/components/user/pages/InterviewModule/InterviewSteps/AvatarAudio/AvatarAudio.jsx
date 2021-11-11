@@ -94,7 +94,7 @@ const AvatarAudio = ({ previewAudio, setPreviewAudio }) => {
               </span>{" "}
             </div>
           </div>
-          <button className="upload-button" onClick={() => uploadState(true)}>
+          <button className="upload-button" onClick={() => setUploadState(true)}>
             UPLOAD THIS VIDEO
           </button>
         </div>

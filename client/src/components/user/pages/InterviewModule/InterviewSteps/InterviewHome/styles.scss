@@ -55,11 +55,13 @@
     }
   }
   .enhance-container {
-    margin: 30px 0;
     color: #6b1576;
     background-color: white;
     border-radius: 20px;
     box-shadow: 1px 1px 8px 4px #80808085;
+    @media screen and (max-width: 898px) {
+      margin: 30px 0;
+    }
     .enchance-options {
       padding: 20px 0;
       border-bottom: 1px solid #e1d0e3;

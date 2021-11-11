@@ -106,7 +106,7 @@
           background: #ffffff;
           border-radius: 0 0 20px 20px;
           .MuiGrid-item.grid-item:nth-child(odd) {
-            background-color: #6f177b3d;
+            background-color: #ececec3d;
             @media screen and (max-width: 898px) {
               background-color: white;
             }
@@ -123,6 +123,7 @@
             img {
               border-radius: 20px 0 0 20px;
               height: 100px;
+              margin-bottom: -5px;
             }
             .video-content {
               display: flex;
@@ -131,7 +132,7 @@
               flex-direction: column;
               .video-title {
                 color: #6b1874;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 600;
               }
               .likes-count {

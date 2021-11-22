@@ -45,19 +45,28 @@ const CartoonText = ({ interviewType, setInterviewType }) => {
                 </div>
               </Grid>
               <Grid item md={6} xs={12}>
-                <div className="cartoon-div">
+                <div
+                  className="cartoon-div"
+                  onClick={() => setInterviewType("panel-interview")}
+                >
                   <img src={CartoonTwo} alt="Coffee table interview" />
                   <div className="interview-type">COFFEE TABLE INTERVIEW</div>
                 </div>
               </Grid>
               <Grid item md={6} xs={12}>
-                <div className="cartoon-div">
+                <div
+                  className="cartoon-div"
+                  onClick={() => setInterviewType("panel-interview")}
+                >
                   <img src={CartoonThree} alt="Individual interview" />
                   <div className="interview-type">INDIVIDUAL INTERVIEW</div>
                 </div>
               </Grid>
               <Grid item md={6} xs={12}>
-                <div className="cartoon-div">
+                <div
+                  className="cartoon-div"
+                  onClick={() => setInterviewType("panel-interview")}
+                >
                   <img src={CartoonFour} alt="Panel inerview" />
                   <div className="interview-type">WHITEBOARD INTERVIEW</div>
                 </div>

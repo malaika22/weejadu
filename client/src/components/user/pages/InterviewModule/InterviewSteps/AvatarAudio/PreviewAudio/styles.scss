@@ -1,6 +1,11 @@
+.preview-span {
+  margin: 0 10px;
+}
+
 .avatar-image {
   img {
-    width: 200px;
+    width: 300px;
+    max-width: 90%;
   }
 }
 
@@ -13,16 +18,42 @@
 
 .suggestion-div {
   width: 80%;
-  border: 2px solid #6f177d;
-  height: 108px;
-  border-radius: 20px;
-  padding: 20px;
+  // border: 2px solid #6f177d;
+  // height: 108px;
+  // border-radius: 20px;
+  // padding: 20px;
+  // margin: auto;
   margin: auto;
+  .review-textfield {
+    width: 100%;
+  }
+  fieldset {
+    border-color: purple;
+  }
   .suggestion {
     color: #38383a;
     font-weight: 500;
     span {
       color: #ff0204;
     }
+  }
+}
+
+.record-buttons {
+  border: none;
+  background: #6b1576;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  width: 205px;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: 45px;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: #9828a7;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
   }
 }

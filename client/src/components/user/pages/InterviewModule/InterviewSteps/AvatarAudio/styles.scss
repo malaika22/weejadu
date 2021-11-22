@@ -21,27 +21,85 @@
         .image-div {
           margin: auto;
           text-align: center;
+          position: relative;
           img {
             border-radius: 20px;
-            width: 321px;
             margin: auto;
+            width: 400px;
+            height: 292px;
+          }
+          .record-label {
+            position: absolute;
+            bottom: 24px;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            margin: auto;
+            left: 0;
+            right: 0;
+          }
+          .record-desktop {
+            @media screen and (max-width: 425px) {
+              display: none;
+            }
+          }
+          .record-mobile {
+            display: none;
+            left: 20%;
+            @media screen and (max-width: 425px) {
+              display: block;
+            }
+          }
+        }
+        .avatarContainer {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 20px;
+          background: #989898;
+          border-radius: 25px;
+          width: 400px;
+          margin-left: auto;
+          max-width: 90%;
+          .avatar-div {
+            width: 85px;
+            height: 90px;
+            margin: 20px 20px;
+            cursor: pointer;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
 
       .build-avatar {
         color: #6c1677;
-        font-size: 20px;
         font-weight: 700;
         text-align: center;
         margin: 20px 0;
-        margin-top: 30px;
+        margin-top: 55px;
+        font-size: 18px;
+
+        .tags {
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            color: #9f3aaed6;
+          }
+        }
+        .seperator {
+          margin: 0 25px;
+        }
       }
       .record-time {
         text-align: center;
         font-size: 18px;
         color: #71167d;
         font-weight: 500;
+        margin: 30px 0;
       }
       .buttons-div {
         margin-top: 10px;
@@ -54,19 +112,35 @@
           color: white;
           font-weight: 600;
           margin: 20px 0;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: #9828a7;
+          }
         }
       }
       .terms-conditions {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin: 20px 0;
-        .agreement-div {
-          font-weight: 500;
-          color: #70167a;
-          span {
-            color: #fea01a;
+        .terms-div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .error {
+            svg {
+              color: #eb2e2e;
+            }
           }
+          .agreement-div {
+            font-weight: 500;
+            color: #70167a;
+            span {
+              color: #fea01a;
+            }
+          }
+        }
+        .error-span {
+          font-size: 12px;
+          color: red;
         }
       }
       .upload-button {

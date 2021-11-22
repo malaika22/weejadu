@@ -1,9 +1,12 @@
+.signup-box {
+  padding-bottom: 60px;
+}
 .signup-wrapper {
   min-height: 100vh !important;
 }
 .signup-wrapper .signup {
   background: #6f177b;
-  width: 420px;
+  width: 550px;
   margin: 0 auto;
   max-width: 100%;
   border-radius: 10px;
@@ -54,6 +57,7 @@
   padding: 10px;
   border-radius: 8px;
   width: 100%;
+  margin: 10px 0;
 }
 .signup-wrapper .signup .input-wrapper .PhoneInput input {
   padding: 0 5px;
@@ -85,6 +89,7 @@
 }
 
 .signup-wrapper .signup button {
+  font-weight: 700;
   background: #fea01a;
   color: #fff;
   border-radius: 20px;
@@ -106,7 +111,9 @@
   font-size: 13px;
   font-weight: 400;
   width: 96%;
-  margin: 5px auto;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
 }
 .signup-wrapper .signup p input {
   /* display: inline-block; */
@@ -115,10 +122,10 @@
   width: 14px;
   height: 14px;
   border-radius: 2px;
-  float: left;
+  /* float: left; */
 }
 .signup-wrapper .signup p span {
-  float: left;
+  /* float: left; */
   width: 85%;
 }
 .signup-wrapper .signup p a {
@@ -129,7 +136,7 @@
 .signup-wrapper .signup .signup-with {
   display: flex;
   align-items: center;
-  margin: 15px 0;
+  margin: 25px 0;
   justify-content: center;
   flex-direction: column;
 }
@@ -182,6 +189,7 @@
 
 @media screen and (min-width: 1780px) {
   .signup-box {
+    padding-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;

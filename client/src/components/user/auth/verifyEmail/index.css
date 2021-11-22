@@ -59,6 +59,7 @@
   margin-top: 20px;
   transition: 0.4s all;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 .verify-email-wrapper .verify-email button:hover {
   background: #ff9500;

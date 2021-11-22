@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../partails/header";
 import carrerGrowthThumb from "../../../../assets/career-growth-points.png";
 import jobThumbnail1 from "../../../../assets/job-1.png";
@@ -14,6 +14,24 @@ import { Grid } from "@mui/material";
 import "./index.css";
 import { makeStyles } from "@mui/styles";
 
+const skills = [
+  "Leadership",
+  "Problem solving",
+  "Teamwork",
+  "Communication",
+  "Organisation",
+  "Confidence",
+];
+
+const industries = [
+  "Leadership",
+  "Problem solving",
+  "Teamwork",
+  "Communication",
+  "Organisation",
+  "Confidence",
+];
+
 const useStyles = makeStyles({
   gridContainer: {
     alignItems: "center",
@@ -21,6 +39,46 @@ const useStyles = makeStyles({
 });
 const CareerGrowth = () => {
   const classes = useStyles();
+  const [filteredSkills, setFilteredSkills] = useState([]);
+  const [filteredIndustry, setFilteredIndustry] = useState([]);
+  const handleSearch = (e) => {
+    if (e.target.name === "skills") {
+      if (e.target.value) {
+        const check = skills.filter((skill) => {
+          const val = e.target.value.toLocaleLowerCase().split(" ")[0];
+          console.log(
+            e.target.value.toLocaleLowerCase().split(" ")[0],
+            e.target.value,
+            skill
+          );
+          if (skill.toLocaleLowerCase().indexOf(val) !== -1) {
+            return true;
+          }
+        });
+        console.log(check);
+        setFilteredSkills([...check]);
+      } else {
+        setFilteredSkills([]);
+      }
+    } else if (e.target.name === "industry") {
+      console.log("in industry", e.target.name, e.target.value);
+      if (e.target.value) {
+        const check = industries.filter((industry) => {
+          const val = e.target.value.toLocaleLowerCase().split(" ")[0];
+          if (industry.toLocaleLowerCase().indexOf(val) !== -1) {
+            return true;
+          }
+        });
+        console.log(check);
+        setFilteredIndustry([...check]);
+      } else {
+        setFilteredIndustry([]);
+      }
+    }
+  };
+
+  console.log("filtered industry", filteredIndustry);
+
   return (
     <>
       <section className="career-growth-wrapper bg-wrapper-2">
@@ -59,18 +117,52 @@ const CareerGrowth = () => {
                   Jobs that require <br />
                   specific skills
                 </h4>
-                <div className="search-box">
-                  <input type="text" placeholder="Search by skills" />
-                  <button>
-                    <Search />
-                  </button>
+                <div className="search-box-container">
+                  <div className="search-box">
+                    <input
+                      type="text"
+                      placeholder="Search by skills"
+                      onChange={handleSearch}
+                      name="skills"
+                    />
+                    <button>
+                      <Search />
+                    </button>
+                  </div>
+                  {filteredSkills?.length ? (
+                    <div className="filtered-skills-div">
+                      {filteredSkills.map((skill) => (
+                        <div className="skill-option">{skill}</div>
+                      ))}
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
-                <div className="search-box">
-                  <input type="text" placeholder="Search by industry" />
-                  <button>
-                    <Search />
-                  </button>
+
+                <div className="search-box-container">
+                  <div className="search-box">
+                    <input
+                      type="text"
+                      placeholder="Search by industry"
+                      onChange={handleSearch}
+                      name="industry"
+                    />
+                    <button>
+                      <Search />
+                    </button>
+                  </div>
+                  {filteredIndustry?.length ? (
+                    <div className="filtered-industry-div">
+                      {filteredIndustry.map((skill) => (
+                        <div className="skill-option">{skill}</div>
+                      ))}
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
+
                 <Stack
                   direction="row"
                   spacing={2}

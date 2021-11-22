@@ -141,7 +141,7 @@ const Signup = () => {
                   />
                 </div>
               </Grid>
-              <p style={{ textAlign: "left" }}>
+              <p style={{ textAlign: "center" }}>
                 <input
                   type="checkbox"
                   onChange={(e) => {

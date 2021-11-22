@@ -34,6 +34,7 @@
   font-size: 12px;
 }
 .login-wrapper .login .input-wrapper .PhoneInput {
+  margin: 10px 0;
   border: 1px solid #d3d3d3;
   background: #fff;
   /* padding: 9px 10px; */
@@ -96,6 +97,7 @@
   padding: 12px;
   cursor: pointer;
   transition: 0.4s all;
+  font-weight: 700;
 }
 .login-wrapper .login button:hover {
   background: #ff9500;

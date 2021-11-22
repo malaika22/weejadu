@@ -7,6 +7,7 @@ footer {
 footer ul {
   text-align: center;
   padding: 8px 0;
+  padding-bottom: 30px;
 }
 footer ul li {
   display: inline-block;

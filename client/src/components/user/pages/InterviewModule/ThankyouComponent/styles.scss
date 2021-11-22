@@ -1,0 +1,128 @@
+.result-container {
+  .received-response {
+    .test-response {
+      background: white;
+      border-radius: 25px;
+      box-shadow: 1px 1px 8px 4px #e9e9e9;
+      margin: 40px 0;
+      img {
+      }
+      .wait-notice {
+        color: #6b1674;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0 0 60px 0;
+        text-align: center;
+      }
+    }
+    .analysis-div {
+      margin: 50px auto;
+      text-align: center;
+      .response-analysis {
+        color: #6b1576;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+      .analysis-instructions {
+        color: #a664df;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 500;
+      }
+    }
+    .response-wrapper {
+      border-radius: 25px;
+      margin-bottom: 40px;
+      min-height: 349px;
+      margin-right: 20px;
+      .response-div {
+        padding: 30px 0;
+        word-break: break-word;
+        text-align: center;
+        h5 {
+          text-align: center;
+          color: white;
+          font-size: 20px;
+          border-bottom: 1px solid white;
+          padding-bottom: 20px;
+        }
+        .response-icons {
+          margin: 20px 0;
+          .review-div {
+            color: white;
+            font-size: 23px;
+            font-weight: 700;
+            padding: 20px 0;
+          }
+          svg {
+            font-size: 67px;
+            color: white;
+          }
+        }
+        .thumbs-up {
+          font-size: 34px;
+          color: white;
+          background: #64bee3;
+          padding: 9px 9px;
+          border-radius: 50%;
+        }
+        .after-load {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .response-footer {
+    margin-bottom: 35px;
+    margin: 20px 0 54px 0;
+    button {
+      border: none;
+      background: #6f177b;
+      width: 207px;
+      padding: 20px 0;
+      border-radius: 20px;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: #4d0e55;
+      }
+    }
+  }
+  .saved-jadu-container {
+    background: #6f177b;
+    border-radius: 40px 40px 0 0;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    .saved-header {
+      font-size: 20px;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 23px;
+      text-align: center;
+    }
+    svg {
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .expert-div {
+      margin: 0 9px;
+      img {
+        border-radius: 20px;
+      }
+      p {
+        color: white;
+        font-weight: 500;
+        margin: 10px 0;
+      }
+    }
+    .carousel-footer {
+      text-align: center;
+    }
+  }
+}

@@ -25,73 +25,75 @@ const VideoCarousel = ({ title, data }) => {
     },
   });
   return (
-    <div className="carousel-container">
-      <div className="expert-videos">
-        <div className="expert-header">{title}</div>
-        <OwlCarousel
-          responsive={responsive}
-          className="owl-theme"
-          margin={0}
-          loop={true}
-          dots={false}
-          nav={true}
-        >
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+    <>
+      <div className="carousel-container">
+        <div className="expert-videos">
+          <div className="expert-header">{title}</div>
+          <OwlCarousel
+            responsive={responsive}
+            className="owl-theme"
+            margin={0}
+            loop={true}
+            dots={false}
+            nav={true}
+          >
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
-          </div>
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
-          </div>
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
-          </div>
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
-          </div>
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
-          </div>
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
-          </div>
-          <div className="expert-div" onClick={showPlayerHandle}>
-            <div className="image-overlay">
-              <PlayCircle />
-              <img src={ExpertOne} alt="expert" />
+            <div className="expert-div" onClick={() => setshowPlayer(true)}>
+              <div className="image-overlay">
+                <PlayCircle />
+                <img src={ExpertOne} alt="expert" />
+              </div>
+              <p>Interview story-telling</p>
             </div>
-            <p>Interview story-telling</p>
+          </OwlCarousel>
+          <div className="carousel-footer">
+            Terms &amp; conditions | Privacy policy
           </div>
-        </OwlCarousel>
-        <div className="carousel-footer">
-          Terms &amp; conditions | Privacy policy
         </div>
       </div>
-      {showPlayer && <VideoPlayer toggle={showPlayerHandle} />}
-    </div>
+      {showPlayer && <VideoPlayer toggle={() => setshowPlayer(false)} />}
+    </>
   );
 };
 

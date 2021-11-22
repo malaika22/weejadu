@@ -42,7 +42,7 @@ const UserVideo = () => {
           <button className="record-buttons">PREVIEW</button>
         </Grid>
         <Grid item md={4} sm={12} xs={12}>
-          <button className="record-buttons">SAVE FOR LATE</button>
+          <button className="record-buttons">SAVE FOR LATER</button>
         </Grid>
         <Grid item md={4} sm={12} xs={12}>
           <button className="record-buttons">DISCARD</button>

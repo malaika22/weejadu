@@ -11,10 +11,38 @@
   }
   .video-div {
     text-align: center;
-    img {
-      width: 400px;
+    .record-div {
+      width: 439px;
       margin: auto;
+      /* background: #6b1576; */
+      padding: 28px 20px;
+      max-width: 100%;
       border-radius: 20px;
+      @media only screen and (max-width: 425px) {
+        width: auto;
+      }
+      img {
+        width: 100%;
+        margin: auto;
+        border-radius: 20px;
+      }
+      .desktop {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        @media only screen and (max-width: 425px) {
+          display: none;
+        }
+      }
+      .mobile {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        display: none;
+        @media only screen and (max-width: 425px) {
+          display: block;
+        }
+      }
     }
   }
 
@@ -36,28 +64,35 @@
     margin: 20px 0;
     transition: all 0.3s linear;
     &:hover {
-      background-color: #5543af;
+      background-color: #9828a7;
     }
     @media only screen and (max-width: 900px) {
       width: 100%;
     }
   }
+
   .terms-conditions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px 0;
-    .error {
-      svg {
-        color: #eb2e2e;
+    .terms-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .error {
+        svg {
+          color: #eb2e2e;
+        }
+      }
+      .agreement-div {
+        font-weight: 500;
+        color: #70167a;
+        span {
+          color: #fea01a;
+        }
       }
     }
-    .agreement-div {
-      font-weight: 500;
-      color: #70167a;
-      span {
-        color: #fea01a;
-      }
+    .error-span {
+      font-size: 12px;
+      color: red;
     }
   }
   .upload-button {

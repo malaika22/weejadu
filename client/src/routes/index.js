@@ -11,6 +11,7 @@ import CareerGrowth from "../components/user/pages/careerGrowth";
 import HomeLayout from "../components/user/pages/homeLayout/HomeLayout";
 import InterviewModule from "../components/user/pages/InterviewModule";
 import InterviewSteps from "../components/user/pages/InterviewModule/InterviewSteps/index";
+import Thankyou from "../components/user/pages/InterviewModule/ThankyouComponent/Thankyou";
 
 const Routes = () => {
   return (
@@ -28,6 +29,7 @@ const Routes = () => {
             path="/jadu-interviews/interview/:interviewId"
             component={InterviewSteps}
           />
+          <Route exact path="/thankyou" component={Thankyou} />
           <Route exact path="/career-growth" component={CareerGrowth} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />

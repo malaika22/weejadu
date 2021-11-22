@@ -27,7 +27,7 @@ const Header = ({ image, arrow, color, link, func }) => {
         return (
           <select onChange={handleRoute}>
             <option value="" disabled selected>
-              Inteviews
+              Interviews
             </option>
             <option value="interview">Memorability</option>
             <option>Enthusiasm</option>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RecordVideoIcon from "../../../../../../assets/interviewModule/recordVideo.jpg";
+import recordVideo from "../../../../../../assets/interviewModule/recordVideo.gif";
 import { Checkbox, Grid, SwipeableDrawer } from "@mui/material";
 import {
   FavoriteSharp,
@@ -11,8 +11,11 @@ import {
 import SavedThumbnailOne from "../../../../../../assets/interviewModule/savedThumbnailOne.jpg";
 import SavedThumbnailTwo from "../../../../../../assets/interviewModule/savedThumbnailTwo.jpg";
 import SavedThumbnailThree from "../../../../../../assets/interviewModule/savedThumbnailThree.jpg";
+import video from "../../../../../../assets/video.mp4";
 import Disclaimer from "../../../../../../assets/interviewModule/disclaimer.jpg";
+import { useHistory } from "react-router";
 import { makeStyles } from "@mui/styles";
+import { toast } from "react-toastify";
 import "./styles.scss";
 import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 
@@ -29,7 +32,27 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
   const [toggleState, setToggleState] = useState(false);
   const [uploadState, setUploadState] = useState(false);
   const [checkStatus, setCheckStatus] = useState(false);
+  const [checkError, setCheckError] = useState(false);
+  const [save, setSave] = useState(false);
+  console.log("status", checkStatus);
   const classes = useStyles();
+  const history = useHistory();
+  const handleUploadClick = () => {
+    if (!checkStatus) {
+      setCheckError(true);
+    } else if (checkStatus && !checkError) {
+      history.push("/thankyou");
+    }
+  };
+
+  const handleSave = () => {
+    setSave(true);
+    toast.success("Saved succesfully");
+    setTimeout(() => {
+      setPreviewVideo(false);
+    }, 2000);
+  };
+
   return (
     <div className="record-video-container">
       {previewVideo ? (
@@ -39,7 +62,7 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
             <iframe
               width="100%"
               height="400"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              src={video}
               title="shark"
             ></iframe>
           </div>
@@ -48,10 +71,17 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
           </div>
           <Grid container spacing={2}>
             <Grid item md={6} sm={12} xs={12}>
-              <button className="record-buttons">SAVE FOR LATE</button>
+              <button className="record-buttons" onClick={handleSave}>
+                SAVE FOR LATER
+              </button>
             </Grid>
             <Grid item md={6} sm={12} xs={12}>
-              <button className="record-buttons">DISCARD</button>
+              <button
+                className="record-buttons"
+                onClick={() => setPreviewVideo(false)}
+              >
+                DISCARD
+              </button>
             </Grid>
           </Grid>
         </>
@@ -59,7 +89,11 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
         <>
           <div className="record-title">RECORD YOUR VIDEO</div>
           <div className="video-div">
-            <img src={RecordVideoIcon} alt="Record video" />
+            <div className="record-div">
+              <img src={recordVideo} alt="Record video" />
+              {/* <div className="desktop">click to start</div>
+              <div className="mobile">touch to start</div> */}
+            </div>
           </div>
           <div className="allowed-time">
             MAX RECORD TIME ALLOWED : 02:00 minutes
@@ -74,26 +108,45 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
               </button>
             </Grid>
             <Grid item md={4} sm={12} xs={12}>
-              <button className="record-buttons">SAVE FOR LATE</button>
+              <button className="record-buttons">SAVE FOR LATER</button>
             </Grid>
             <Grid item md={4} sm={12} xs={12}>
-              <button className="record-buttons">DISCARD</button>
+              <button
+                className="record-buttons"
+                // onClick={() => setPreviewVideo(false)}
+              >
+                DISCARD
+              </button>
             </Grid>
           </Grid>
         </>
       )}
 
       <div className="terms-conditions">
-        <Checkbox
-          onChange={() => setCheckStatus(!checkStatus)}
-          className={`${uploadState && !checkStatus ? `error` : ``}`}
-        />
-        <div className="agreement-div">
-          I agree to have read the -{" "}
-          <span onClick={() => setToggleState(!toggleState)}>Disclamier</span>{" "}
+        <div className="terms-div">
+          <Checkbox
+            onChange={() => {
+              setCheckStatus(!checkStatus);
+              setCheckError(false);
+            }}
+            className={`${checkError ? `error` : ``}`}
+            checked={checkStatus}
+          />
+          <div className="agreement-div">
+            I agree to have read the -{" "}
+            <span onClick={() => setToggleState(!toggleState)}>Disclaimer</span>{" "}
+          </div>
         </div>
+        {checkError ? (
+          <div className="error-span">
+            Please read and accept the disclaimer checkbox
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-      <button className="upload-button" onClick={() => setUploadState(true)}>
+
+      <button className="upload-button" onClick={handleUploadClick}>
         UPLOAD THIS VIDEO
       </button>
       <div className="saved-jadu-container">
@@ -138,7 +191,15 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
                 and may not approve videos that may be deemed objectionable, at
                 the sole discretion of the <span>Wejadu management</span>
               </div>
-              <button onClick={() => setToggleState(false)}>I ACCEPT</button>
+              <button
+                onClick={() => {
+                  setCheckStatus(true);
+                  setCheckError(false);
+                  setToggleState(false);
+                }}
+              >
+                I ACCEPT
+              </button>
             </div>
           </Grid>
         </Grid>

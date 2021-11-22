@@ -22,6 +22,13 @@
 
 .card-box-wrapper .card-box.bottom-card {
   padding: 55px 10px;
+  padding-bottom: 90px;
+}
+
+@media screen and (max-width: 425px) {
+  .card-box-wrapper .card-box.bottom-card {
+    padding-bottom: 55px;
+  }
 }
 .card-box-wrapper .card-box h2 {
   font-size: 22px;
@@ -122,9 +129,17 @@
 }
 .card-box-wrapper .card-box a {
   position: absolute;
-  bottom: 60px;
+
+  bottom: 20px;
   z-index: 99;
 }
+
+@media screen and (max-width: 425px) {
+  .card-box-wrapper .card-box a {
+    bottom: 60px;
+  }
+}
+
 .card-box-wrapper .card-box a button {
   background: #6f177b;
   padding: 10px 10px;

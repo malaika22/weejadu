@@ -10,6 +10,9 @@ import Footer from "../../partails/footer/index";
 import InterviewHeader1 from "../../../../assets/interviewModule/interviewHeader1.jpg";
 import InterviewThumbnail from "../../../../assets/interviewModule/interviewThumbnail.jpg";
 import InterviewThumbnail2 from "../../../../assets/interviewModule/interviewThumbnail2.jpg";
+import backPack from "../../../../assets/interviewModule/backPack.jpg";
+import laptop from "../../../../assets/interviewModule/laptop.jpg";
+import { ChevronRight, PlayCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 import { makeStyles } from "@mui/styles";
@@ -30,14 +33,14 @@ const InterviewModule = () => {
       level: 1,
       videoDetails: [
         {
-          img: InterviewThumbnail,
+          img: backPack,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
         {
-          img: InterviewThumbnail2,
+          img: laptop,
           videoTitle: "Convinving your parents on your career choice",
-          likes: 1279,
+          likes: 180,
         },
       ],
     },
@@ -48,12 +51,12 @@ const InterviewModule = () => {
       level: 1,
       videoDetails: [
         {
-          img: InterviewThumbnail,
+          img: backPack,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
         {
-          img: InterviewThumbnail2,
+          img: laptop,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
@@ -66,12 +69,12 @@ const InterviewModule = () => {
       level: 1,
       videoDetails: [
         {
-          img: InterviewThumbnail,
+          img: backPack,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
         {
-          img: InterviewThumbnail2,
+          img: laptop,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
@@ -84,12 +87,12 @@ const InterviewModule = () => {
       level: 1,
       videoDetails: [
         {
-          img: InterviewThumbnail,
+          img: backPack,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
         {
-          img: InterviewThumbnail2,
+          img: laptop,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
@@ -102,12 +105,12 @@ const InterviewModule = () => {
       level: 1,
       videoDetails: [
         {
-          img: InterviewThumbnail,
+          img: backPack,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
         {
-          img: InterviewThumbnail2,
+          img: laptop,
           videoTitle: "Convinving your parents on your career choice",
           likes: 1279,
         },
@@ -117,22 +120,21 @@ const InterviewModule = () => {
 
   const classes = useStyles();
   const [interviewLength, setInterviewLength] = useState(0);
-  console.log("interview length", interviewLength);
-  console.log(
-    interviewData
-      .slice(interviewLength, interviewLength + 2)
-      .map((detail) => console.log(detail))
-  );
+  const [videoLength, setVideoLength] = useState(0);
+
   const handleShowMore = () => {
-    console.log("interview length", interviewLength);
     if (interviewLength < interviewData.length - 2) {
       setInterviewLength(interviewLength + 1);
+    } else {
+      setInterviewLength(0);
     }
   };
 
   const handleShowLess = () => {
     if (interviewLength > 0) {
       setInterviewLength(interviewLength - 1);
+    } else {
+      setInterviewLength(interviewData.length - 2);
     }
   };
 
@@ -161,69 +163,85 @@ const InterviewModule = () => {
               {interviewData
                 .slice(interviewLength, interviewLength + 2)
                 .map((interviewDetails) => (
-                  <Link
-                    to={`/jadu-interviews/interview/${interviewDetails.id}`}
-                  >
-                    <div className="interview-div-main">
-                      <div className="interview-header">
-                        <Grid container className={classes.gridContainer}>
-                          <Grid item md={3}>
-                            <img
-                              src={InterviewHeader1}
-                              alt={interviewDetails.title}
-                            />
-                          </Grid>
-                          <Grid item md={10}>
-                            <div className="header-content">
-                              <div className="header-title">
-                                {interviewDetails?.title}
-                              </div>
-                              <div className="level-div">
-                                <span>
-                                  {interviewDetails?.challenges} CHALLENGES
-                                </span>
-                                <span className="level">
-                                  LEVEL - {interviewDetails?.level}{" "}
-                                </span>
-                              </div>
-                            </div>
-                          </Grid>
-                        </Grid>
-                      </div>
-                      <div className="interview-body">
-                        <Grid container>
-                          {interviewDetails.videoDetails.map((video) => (
-                            <Grid item md={6} xs={12} className="grid-item">
-                              <div className="interview-div">
-                                <Grid
-                                  container
-                                  className={classes.gridContainer}
-                                >
-                                  <Grid item md={3}>
-                                    <img
-                                      src={video?.img}
-                                      title={video.videoTitle}
-                                    />
-                                  </Grid>
-                                  <Grid item md={9}>
-                                    <div className="video-content">
-                                      <div className="video-title">
-                                        {video?.videoTitle}
-                                      </div>
-                                      <div className="likes-count">
-                                        LIKES : {video.likes}
-                                      </div>
-                                    </div>
-                                  </Grid>
-                                </Grid>
+                  <div className="interview-div-main">
+                    <Grid container>
+                      <Grid item md={5} xs={12}>
+                        <div className="interview-header">
+                          <Grid container className={classes.gridContainer}>
+                            <Grid item md={12} xs={3}>
+                              <img
+                                src={InterviewHeader1}
+                                alt={interviewDetails.title}
+                              />
+                            </Grid>
+                            <Grid item md={12} xs={10}>
+                              <div className="header-content">
+                                <div className="header-title">
+                                  {interviewDetails?.title}
+                                </div>
+                                <div className="level-div">
+                                  <span>
+                                    {interviewDetails?.challenges} CHALLENGES
+                                  </span>
+                                  <span className="level">
+                                    LEVEL - {interviewDetails?.level}{" "}
+                                  </span>
+                                </div>
                               </div>
                             </Grid>
-                          ))}
-                        </Grid>
-                        <div className="load-more">Load more</div>
-                      </div>
-                    </div>
-                  </Link>
+                          </Grid>
+                        </div>
+                      </Grid>
+                      <Grid item md={7}>
+                        <div className="interview-body">
+                          <div className="load-more-desktop">
+                            <KeyboardArrowUpOutlined />{" "}
+                          </div>
+                          <Grid container>
+                            {interviewDetails.videoDetails.map((video) => (
+                              <Grid item md={12} xs={12} className="grid-item">
+                                <div className="interview-div">
+                                  <Link
+                                    to={`/jadu-interviews/interview/${interviewDetails.id}`}
+                                  >
+                                    <Grid
+                                      container
+                                      className={classes.gridContainer}
+                                    >
+                                      <Grid item md={3} xs={3}>
+                                        <div className="image-overlay">
+                                          <PlayCircle />
+                                          <img
+                                            src={video?.img}
+                                            title={video.videoTitle}
+                                            alt="img"
+                                          />
+                                        </div>
+                                      </Grid>
+                                      <Grid item md={9} xs={9}>
+                                        <div className="video-content">
+                                          <div className="video-title">
+                                            {video?.videoTitle}
+                                          </div>
+                                          <div className="likes-count">
+                                            LIKES : {video.likes}
+                                          </div>
+                                        </div>
+                                      </Grid>
+                                    </Grid>
+                                  </Link>
+                                </div>
+                              </Grid>
+                            ))}
+                          </Grid>
+                          <div className="load-more-desktop">
+                            <KeyboardArrowDownOutlined />{" "}
+                          </div>
+                          <div className="load-more">Load more</div>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
                 ))}
             </Grid>
           </Grid>

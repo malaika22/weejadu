@@ -8,6 +8,7 @@ import OptionTwo from "../../../../assets/home/optionTwo.jpg";
 import OptionThree from "../../../../assets/home/optionThree.jpg";
 import OptionFour from "../../../../assets/home/optionFour.jpg";
 import OptionFive from "../../../../assets/home/optionFive.jpg";
+import lockVideo from "../../../../assets/interviewModule/lockVideo.jpg";
 import Cadila from "../../../../assets/home/caldia.jpg";
 import {
   ArrowRight,
@@ -57,12 +58,16 @@ const HomeLayout = () => {
     console.log("interview length", optionsData);
     if (homeOptionsLength < optionsData.length - 2) {
       setHomeOptionsLength(homeOptionsLength + 1);
+    } else {
+      setHomeOptionsLength(0);
     }
   };
 
   const handleShowLess = () => {
     if (homeOptionsLength > 0) {
       setHomeOptionsLength(homeOptionsLength - 1);
+    } else {
+      setHomeOptionsLength(optionsData.length - 2);
     }
   };
   return (
@@ -112,7 +117,7 @@ const HomeLayout = () => {
                         >
                           <div className="clock-video-div">
                             <img
-                              src={OptionOne}
+                              src={lockVideo}
                               alt="Sponsored Job Interview"
                               className="lock-image"
                             />

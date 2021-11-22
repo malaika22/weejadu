@@ -102,19 +102,26 @@
         .clock-video-div {
           position: relative;
           svg {
-            position: absolute;
-            left: 29%;
-            top: 19%;
             font-size: 51px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
             color: black;
             @media only screen and (max-width: 599px) {
-              font-size: 200px;
+              font-size: 84px;
             }
           }
           .lock-image {
-            width: 100%;
-            height: auto;
+            height: 90px;
+            width: 123px;
             opacity: 0.6;
+            @media only screen and (max-width: 599px) {
+              width: auto;
+              height: auto;
+            }
           }
         }
         img {
@@ -123,6 +130,7 @@
         }
         .option-tab {
           text-align: center;
+          // margin-top: 25px;
           .sponsor-div {
             position: relative;
             position: relative;
@@ -139,6 +147,12 @@
               left: 10px;
               border-radius: 50%;
               width: 55px;
+              position: absolute;
+              left: -1px;
+              /* border-radius: 50%; */
+              width: 81px;
+              border-radius: 50px 0px 0px 50px;
+              height: 100%;
             }
           }
           .option {
@@ -164,9 +178,12 @@
               }
             }
           }
+          @media only screen and (max-width: 599px) {
+            margin-top: 25px;
+          }
         }
         .options-situation {
-          margin: 10px 0;
+          margin: 20px 0;
           color: #a464de;
           text-align: center;
         }

@@ -3,13 +3,21 @@ import { Grid, Checkbox, SwipeableDrawer } from "@mui/material";
 // import Avatar from "../../../../../../../assets/interviewModule/avatar.jpg";
 import avatar from "../../../../../../../assets/interviewModule/avatar.gif";
 import Disclaimer from "../../../../../partails/disclaimerDrawer";
+import AvatarGifOne from "../../../../../../../assets/avatar/avatargif1.gif";
+import AvatarGifTwo from "../../../../../../../assets/avatar/avatargif2.gif";
+import AvatarGifThree from "../../../../../../../assets/avatar/avatargif3.gif";
+import AvatarGifFour from "../../../../../../../assets/avatar/avatargif4.gif";
+import AvatarGifFice from "../../../../../../../assets/avatar/avatargif5.gif";
+import AvatarGifSix from "../../../../../../../assets/avatar/avatargif6.gif";
+import AvatarGifSeven from "../../../../../../../assets/avatar/avatargif7.gif";
+import AvatarGifEight from "../../../../../../../assets/avatar/avatargif8.gif";
 import { useHistory } from "react-router-dom";
 import { TextField } from "@mui/material";
 import { toast } from "react-toastify";
 import "./styles.scss";
 
 const PreviewAudio = ({
-  // avatar,
+  avatar,
   setAvatar,
   checkStatus,
   setCheckStatus,
@@ -29,9 +37,32 @@ const PreviewAudio = ({
   // const [checkError, setCheckError] = useState(false);
 
   const [save, setSave] = useState(false);
+  console.log(avatar);
+  const renderSelectedAvatar = () => {
+    switch (avatar) {
+      case "avatarOne":
+        return <img src={AvatarGifOne} alt="checkout" />;
+      case "avatarTwo":
+        return <img src={AvatarGifTwo} />;
+      case "avatarThree":
+        return <img src={AvatarGifThree} />;
+      case "avatarFour":
+        return <img src={AvatarGifFour} />;
+      case "avatarFive":
+        return <img src={AvatarGifFice} />;
+      case "avatarSix":
+        return <img src={AvatarGifSix} />;
+      case "avatarSeven":
+        return <img src={AvatarGifSeven} />;
+      case "avatarEight":
+        return <img src={AvatarGifEight} />;
+      default:
+        return <></>;
+    }
+  };
   const handleUploadClick = () => {
     if (!checkStatus) {
-      setCheckError(false);
+      setCheckError(true);
     } else if (checkStatus && !checkError) {
       history.push("/thankyou");
     }
@@ -44,6 +75,13 @@ const PreviewAudio = ({
       setPreviewAudio(false);
     }, 2000);
   };
+
+  const handleDiscard = () => {
+    toast.success("Audio discarded succesfully");
+    setTimeout(() => {
+      setPreviewAudio(false);
+    }, 2000);
+  };
   return (
     <>
       <div className="avatar-header">
@@ -52,9 +90,7 @@ const PreviewAudio = ({
           PREVIEW
         </div>
       </div>
-      <div className="avatar-image">
-        <img src={avatar} alt="" />
-      </div>
+      <div className="avatar-image">{renderSelectedAvatar()}</div>
 
       <div className="suggestion-title">DO YOU MEAN THIS:</div>
       <div className="suggestion-div">
@@ -82,10 +118,7 @@ const PreviewAudio = ({
           </button>
         </Grid>
         <Grid item md={6} sm={12} xs={12}>
-          <button
-            className="record-buttons"
-            onClick={() => setPreviewAudio(false)}
-          >
+          <button className="record-buttons" onClick={handleDiscard}>
             DISCARD
           </button>
         </Grid>

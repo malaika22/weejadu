@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../partails/header/index";
-import HomeBanner from "../../../../assets/home/homeBanner.jpg";
+import HomeBanner from "../../../../assets/home/homeBanner.png";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import OptionOne from "../../../../assets/home/optionOne.jpg";
@@ -9,7 +9,7 @@ import OptionThree from "../../../../assets/home/optionThree.jpg";
 import OptionFour from "../../../../assets/home/optionFour.jpg";
 import OptionFive from "../../../../assets/home/optionFive.jpg";
 import lockVideo from "../../../../assets/interviewModule/lockVideo.jpg";
-import Cadila from "../../../../assets/home/caldia.jpg";
+import Cadila from "../../../../assets/home/caldia.png";
 import {
   ArrowRight,
   ArrowForwardIosOutlined,

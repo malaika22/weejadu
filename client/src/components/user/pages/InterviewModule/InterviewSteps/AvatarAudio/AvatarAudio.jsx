@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { ArrowRight } from "@mui/icons-material";
 import { Grid, Checkbox, SwipeableDrawer } from "@mui/material";
 import InterviewImages from "../../../../../../assets/interviewModule/avatarImages.jpg";
-import RecordButton from "../../../../../../assets/interviewModule/holdButton.gif";
+import RecordButtonDesktop from "../../../../../../assets/interviewModule/holdButtonDesktop.gif";
+import RecordButtonMobile from "../../../../../../assets/interviewModule/holdButtonMobile.gif";
 import { makeStyles } from "@mui/styles";
 import "./styles.scss";
 import { useHistory } from "react-router-dom";
-import avatarOne from "../../../../../../assets/avatarOne.png";
-import avatarTwo from "../../../../../../assets/avatarTwo.png";
-import avatarThree from "../../../../../../assets/avatarThree.jpg";
-import avatarFour from "../../../../../../assets/avatarFour.jpg";
-import avatarFive from "../../../../../../assets/avatarFive.jpg";
-import avatarSix from "../../../../../../assets/avatarSix.jpg";
-import avatarSeven from "../../../../../../assets/avatarSeven.jpg";
-import avatarEight from "../../../../../../assets/avatarEight.jpg";
+import avatarOne from "../../../../../../assets/avatar/avatar1.png";
+import avatarTwo from "../../../../../../assets/avatar/avatar2.png";
+import avatarThree from "../../../../../../assets/avatar/avatar3.png";
+import avatarFour from "../../../../../../assets/avatar/avatar4.png";
+import avatarFive from "../../../../../../assets/avatar/avatar5.png";
+import avatarSix from "../../../../../../assets/avatar/avatar6.png";
+import avatarSeven from "../../../../../../assets/avatar/avatar7.png";
+import avatarEight from "../../../../../../assets/avatar/avatar8.png";
 import PreviewAudio from "./PreviewAudio/PreviewAudio";
 import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 import { toast } from "react-toastify";
@@ -53,10 +54,8 @@ const AvatarAudio = ({ previewAudio, setPreviewAudio }) => {
       setPreviewAudio(true);
     }
   };
-  const handleSelectAvatar = (image) => {
-    console.log("image", image.target.src);
-    // const img = URL.createObjectURL(image.src);
-    setAvatar(image.target.src);
+  const handleSelectAvatar = (avatar) => {
+    setAvatar(avatar);
     // setAvatar(img);
   };
   console.log("avatar", avatar);
@@ -74,73 +73,105 @@ const AvatarAudio = ({ previewAudio, setPreviewAudio }) => {
                     <div className="avatarContainer">
                       <Grid container>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarOne" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarOne}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarOne")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarTwo" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarTwo}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarTwo")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarThree" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarThree}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarThree")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarFour" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarFour}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarFour")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarFive" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarFive}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarFive")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarSix" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarSix}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarSix")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarSeven" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarSeven}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarSeven")}
                               alt="avatar"
                             />
                           </div>
                         </Grid>
                         <Grid item md={3}>
-                          <div className="avatar-div">
+                          <div
+                            className={`avatar-div ${
+                              avatar === "avatarEight" ? "selectedAvatar" : ""
+                            }`}
+                          >
                             <img
                               src={avatarEight}
-                              onClick={handleSelectAvatar}
+                              onClick={() => handleSelectAvatar("avatarEight")}
                               alt="avatar"
                             />
                           </div>
@@ -149,14 +180,11 @@ const AvatarAudio = ({ previewAudio, setPreviewAudio }) => {
                     </div>
                   </Grid>
                   <Grid item md={6} xs={12}>
-                    <div className="image-div">
-                      <img src={RecordButton} alt="Press to record" />
-                      <div className="record-label record-desktop">
-                        Click to record
-                      </div>
-                      <div className="record-label record-mobile">
-                        Hold &amp; press to record
-                      </div>
+                    <div className="image-div image-div-desktop">
+                      <img src={RecordButtonDesktop} alt="Press to record" />
+                    </div>
+                    <div className="image-div image-div-mobile">
+                      <img src={RecordButtonDesktop} alt="Press to record" />
                     </div>
                   </Grid>
                 </Grid>

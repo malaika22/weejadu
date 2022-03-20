@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import recordVideo from "../../../../../../assets/interviewModule/recordVideo.gif";
+import recordVideoMobile from "../../../../../../assets/interviewModule/recordButtonMobile.gif";
+import recordVideoDesktop from "../../../../../../assets/interviewModule/recordButtonDesktop.gif";
 import { Checkbox, Grid, SwipeableDrawer } from "@mui/material";
 import {
   FavoriteSharp,
@@ -53,6 +54,13 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
     }, 2000);
   };
 
+  const handleDiscardVideo = () => {
+    toast.success("Video discarded succesfully");
+    setTimeout(() => {
+      setPreviewVideo(false);
+    }, 2000);
+  };
+
   return (
     <div className="record-video-container">
       {previewVideo ? (
@@ -76,10 +84,7 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
               </button>
             </Grid>
             <Grid item md={6} sm={12} xs={12}>
-              <button
-                className="record-buttons"
-                onClick={() => setPreviewVideo(false)}
-              >
+              <button className="record-buttons" onClick={handleDiscardVideo}>
                 DISCARD
               </button>
             </Grid>
@@ -89,10 +94,11 @@ const RecordVideo = ({ previewVideo, setPreviewVideo }) => {
         <>
           <div className="record-title">RECORD YOUR VIDEO</div>
           <div className="video-div">
-            <div className="record-div">
-              <img src={recordVideo} alt="Record video" />
-              {/* <div className="desktop">click to start</div>
-              <div className="mobile">touch to start</div> */}
+            <div className="record-div record-div-desktop">
+              <img src={recordVideoDesktop} alt="Record video" />
+            </div>
+            <div className="record-div record-div-mobile">
+              <img src={recordVideoMobile} alt="Record video" />
             </div>
           </div>
           <div className="allowed-time">

@@ -12,6 +12,10 @@ import {
   PlayCircle,
 } from "@mui/icons-material";
 import ExpertOne from "../../../../../../assets/interviewModule/expertOne.jpg";
+import recordIcon from "../../../../../../assets/recordIcon.png";
+import videoIcon from "../../../../../../assets/videoIcon.png";
+import cartoonIcon from "../../../../../../assets/cartoonIcon.png";
+
 import ExpertTwo from "../../../../../../assets/interviewModule/expertTwo.jpg";
 import ExpertThree from "../../../../../../assets/interviewModule/expertThree.jpg";
 import interview from "../../../../../../assets/interviewModule/interview.jpg";
@@ -86,6 +90,8 @@ const InterviewHome = ({ setSteps, steps }) => {
                 <p>Memorability, Enthusiam</p>
               </div>
               <div className="enchance-options">
+                <div className="enhance-title">Total levels : 04</div>
+                <div className="enhance-title">You are in level : 01</div>
                 <div className="enhance-title">
                   JADU'S LEFT TO NEXT LEVEL : 05
                 </div>
@@ -105,13 +111,24 @@ const InterviewHome = ({ setSteps, steps }) => {
             </Grid>
             <Grid item md={6} xs={12}>
               <div className="response-button" onClick={handleSteps}>
-                RECORD OWN VIDEO
+                <span className="icon-span">
+                  <img src={videoIcon} />
+                </span>
+                <span className="button-title">RECORD OWN VIDEO </span>
               </div>
               <div className="response-button" onClick={() => setSteps(2)}>
-                RECORD AUDIO WITH AVATAR
+                <span className="icon-span">
+                  <img src={recordIcon} />
+                </span>
+                <span className="button-title">RECORD AUDIO WITH AVATAR </span>
               </div>
               <div className="response-button" onClick={() => setSteps(3)}>
-                TEXT TYPED INTO CATROON TEMPLATE
+                <span className="icon-span">
+                  <img src={cartoonIcon} />
+                </span>
+                <span className="button-title">
+                  TEXT TYPED INTO CARTOON TEMPLATE{" "}
+                </span>
               </div>
             </Grid>
           </Grid>

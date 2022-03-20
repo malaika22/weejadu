@@ -16,6 +16,7 @@ const InterviewSteps = () => {
   const [avatarAudioPreview, setAvatarAudioPreview] = useState(false);
   const [cartoonTextPreview, setCartoonTextPreview] = useState(false);
   const [previewAudio, setPreviewAudio] = useState(false);
+  const [previewCartoon, setPreviewCatroon] = useState(false);
   const [interviewType, setInterviewType] = useState("");
   const [previewVideo, setPreviewVideo] = useState(false);
   console.log("steps", steps, previewAudio);
@@ -42,6 +43,8 @@ const InterviewSteps = () => {
           <CartoonText
             interviewType={interviewType}
             setInterviewType={setInterviewType}
+            preview={previewCartoon}
+            setPreview={setPreviewCatroon}
           />
         );
       default:
@@ -54,6 +57,12 @@ const InterviewSteps = () => {
         <Header image="true" arrow="true" link="/jadu-interviews" />
       ) : previewAudio ? (
         <Header image="true" arrow="true" func={() => setPreviewAudio(false)} />
+      ) : previewCartoon ? (
+        <Header
+          image="true"
+          arrow="true"
+          func={() => setPreviewCatroon(false)}
+        />
       ) : interviewType ? (
         <Header image="true" arrow="true" func={() => setInterviewType("")} />
       ) : previewVideo ? (

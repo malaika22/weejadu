@@ -8,12 +8,7 @@ import {
   KeyboardArrowDownOutlined,
 } from "@mui/icons-material";
 import Response from "../../../../../assets/interviewModule/response.jpg";
-import responseTwo from "../../../../../assets/interviewModule/response2.jpg";
-import responseThree from "../../../../../assets/interviewModule/response3.jpg";
-import responseFour from "../../../../../assets/interviewModule/response4.jpg";
-import responseFive from "../../../../../assets/interviewModule/response5.jpg";
-import responseSix from "../../../../../assets/interviewModule/response6.jpg";
-import clock from "../../../../../assets/interviewModule/clock.jpg";
+import clock from "../../../../../assets/interviewModule/clock.gif";
 import Header from "../../../partails/header/index";
 import { makeStyles } from "@mui/styles";
 import VideoCarousel from "../../../partails/videoCarousel/VideoCarousel";
@@ -39,7 +34,7 @@ const Thankyou = () => {
   }, 5000);
   return (
     <div className="interview-home-container bg-wrapper-2">
-      <Header image="true" arrow="true" link="/start" />
+      <Header image="true" arrow="true" link="/home" />
       <div className="interview-container">
         <div className="interview-header">
           <div className="jadu-title">
@@ -134,7 +129,7 @@ const Thankyou = () => {
                                   className={classes.gridContainer}
                                 >
                                   <Grid item md={8}>
-                                    <img src={responseTwo} />
+                                    <img src={clock} />
                                   </Grid>
                                 </Grid>
                               </div>
@@ -161,7 +156,7 @@ const Thankyou = () => {
                                   className={classes.gridContainer}
                                 >
                                   <Grid item md={8}>
-                                    <img src={responseThree} />
+                                    <img src={clock} />
                                   </Grid>
                                 </Grid>
                               </div>
@@ -186,7 +181,7 @@ const Thankyou = () => {
                                   className={classes.gridContainer}
                                 >
                                   <Grid item md={8}>
-                                    <img src={responseFour} />
+                                    <img src={clock} />
                                   </Grid>
                                 </Grid>
                               </div>
@@ -210,7 +205,7 @@ const Thankyou = () => {
                                   className={classes.gridContainer}
                                 >
                                   <Grid item md={8}>
-                                    <img src={responseFive} />
+                                    <img src={clock} />
                                   </Grid>
                                 </Grid>
                               </div>
@@ -234,7 +229,7 @@ const Thankyou = () => {
                                   className={classes.gridContainer}
                                 >
                                   <Grid item md={8}>
-                                    <img src={responseSix} />
+                                    <img src={clock} />
                                   </Grid>
                                 </Grid>
                               </div>

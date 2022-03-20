@@ -51,6 +51,18 @@
             }
           }
         }
+        .image-div-desktop {
+          display: block;
+          @media screen and (max-width: 425px) {
+            display: none;
+          }
+        }
+        .image-div-mobile {
+          display: none;
+          @media screen and (max-width: 425px) {
+            display: block;
+          }
+        }
         .avatarContainer {
           height: 100%;
           display: flex;
@@ -63,13 +75,15 @@
           margin-left: auto;
           max-width: 90%;
           .avatar-div {
-            width: 85px;
             height: 90px;
-            margin: 20px 20px;
             cursor: pointer;
             img {
               width: 100%;
               height: 100%;
+            }
+            &.selectedAvatar {
+              background: #6b1576;
+              border-radius: 20px;
             }
           }
         }

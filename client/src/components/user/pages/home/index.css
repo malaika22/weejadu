@@ -9,7 +9,8 @@
   box-shadow: 0 0 7px #dbdbdb;
   width: 80%;
   text-align: center;
-  height: 160px;
+
+  min-height: 222px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,14 +69,58 @@
   font-weight: 400;
 }
 .card-box-wrapper .card-box .side-image {
-  width: 60%;
+  width: 47%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   margin-top: -15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+.card-box-wrapper .card-box .side-image .image-overlay {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-box-wrapper .card-box .side-image .image-overlay img {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-box-wrapper .card-box .side-image .image-overlay svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 50px;
+  color: white;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  /* z-index: 999999; */
+}
+
+.card-box-wrapper .card-box .side-image img {
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1440px) {
+  .card-box-wrapper .card-box {
+    min-height: 160px;
+  }
+  .card-box-wrapper .card-box .side-image {
+    width: 60%;
+  }
+}
+
+/* .card-box-wrapper .card-box .side-image:hover {
+  opacity: 0.8;
+} */
+
 .card-box-wrapper .card-box .side-image video {
   cursor: pointer;
   width: 100%;
@@ -111,7 +156,10 @@
   border-radius: 50%;
   position: absolute;
   bottom: 0;
+  right: 0;
   left: 0;
+  right: 0;
+  margin: auto;
 }
 .card-box-wrapper .card-box .video-items .video-thumbnail img {
   width: 100%;

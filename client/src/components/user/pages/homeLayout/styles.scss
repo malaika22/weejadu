@@ -1,6 +1,12 @@
 .home-container {
   .home-content {
     padding: 40px;
+    width: 70%;
+    margin: 2% auto;
+    @media screen and (max-width: 1440px) {
+      width: fit-content;
+      margin: 0;
+    }
     .home-banner-container {
       // box-shadow: -2px -1px 9px 0px #808080a6;
       border: 1px solid #dbd5d5;
@@ -12,7 +18,6 @@
       margin-top: 37px;
       .home-banner {
         img {
-          padding: 3px;
           border-radius: 20px 20px 0 0;
           width: 100%;
           padding-top: 13px;
@@ -67,9 +72,12 @@
       .show-more {
         position: absolute;
         text-align: center;
-        left: 44%;
-        top: -60px;
+        top: -59px;
+
+        left: 0;
+        right: 0;
         cursor: pointer;
+        margin: auto;
         svg {
           font-size: 80px;
           color: #6b1576;
@@ -81,6 +89,14 @@
       .show-less {
         text-align: center;
         cursor: pointer;
+        position: absolute;
+        text-align: center;
+        // top: 0;
+        bottom: -97px;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+        margin: auto;
         svg {
           font-size: 80px;
           color: #6b1576;

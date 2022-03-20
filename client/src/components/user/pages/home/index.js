@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 import Header from "../../partails/header";
 import VideoPlayer from "../../partails/videoPlayer";
 import { Button, Grid } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { ChevronRight, PlayCircle } from "@mui/icons-material";
 import CareerGrowthThumbnail from "../../../../assets/career-growth.png";
 import videoThumbnail1 from "../../../../assets/video-thumbnail-1.png";
@@ -12,8 +13,15 @@ import videoThumbnail3 from "../../../../assets/video-thumbnail-3.png";
 import videoThumbnail4 from "../../../../assets/video-thumbnail-4.png";
 import videoThumbnail5 from "../../../../assets/video-thumbnail-5.png";
 import "./index.css";
+
+const useStyles = makeStyles({
+  gridContainer: {
+    alignItems: "center",
+  },
+});
 const Home = () => {
   const [showPlayer, setshowPlayer] = useState(false);
+  const classes = useStyles();
   const showPlayerHandle = () => {
     setshowPlayer(!showPlayer);
   };
@@ -21,7 +29,7 @@ const Home = () => {
     <section className="home-screen bg-wrapper-2">
       <Header image="true" arrow="true" link="/" />
       <div className="card-box-wrapper">
-        <Grid container>
+        <Grid container className={classes.gridContainer}>
           <Grid item md={6} xs={12}>
             <div className="card-box">
               <h2>Respond to tough situation</h2>
@@ -34,16 +42,21 @@ const Home = () => {
           </Grid>
           <Grid item md={6} xs={12}>
             <div className="card-box">
-              <Grid container>
+              <Grid container className={classes.gridContainer}>
                 <Grid item md={6} xs={12}>
                   <div className="side-image">
-                    <img
-                      src={CareerGrowthThumbnail}
+                    <div
+                      className="image-overlay"
                       onClick={() => {
                         showPlayerHandle();
                       }}
-                      alt="jadu-carrer-growth"
-                    />
+                    >
+                      <PlayCircle />
+                      <img
+                        src={CareerGrowthThumbnail}
+                        alt="jadu-carrer-growth"
+                      />
+                    </div>
                   </div>
                 </Grid>
                 <Grid item md={6} xs={12}>

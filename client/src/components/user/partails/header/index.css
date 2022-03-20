@@ -29,10 +29,63 @@ header .search-box {
   padding: 0 10px;
   overflow: hidden;
   border-radius: 20px;
+  margin-right: 14px;
   transition: 0.4s all;
 }
+.right-div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+header .right-div .profile-button {
+  background-color: #6e297b;
+  cursor: pointer;
+  z-index: 9;
+  color: #fff;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .right-div .drop-down-div {
+  position: relative;
+}
+
+header .right-div .drop-down-div .menu-container {
+  position: absolute;
+  background: white;
+  padding: 20px;
+  width: 104px;
+  left: -51px;
+  right: 0;
+  /* margin-top: 20px; */
+  margin: auto;
+  margin-top: 12px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 99999;
+  box-shadow: 0px 1px 5px 2px #00000052;
+}
+
+header .right-div .drop-down-div .menu-container ul {
+  list-style: none;
+}
+
+header .right-div .drop-down-div .menu-container ul li {
+  color: #6e297b;
+  margin: 10px 0;
+  border-bottom: 1px solid #6e297b59;
+  /* padding: 20px; */
+  padding-bottom: 10px;
+  cursor: pointer;
+}
 header .search-box.active {
-  width: 65%;
+  width: 55%;
 }
 header .search-box select {
   background: #fff;
@@ -49,6 +102,7 @@ header .search-button {
   height: 100%;
   position: relative;
   justify-content: flex-end;
+  margin-right: 20px;
 }
 header .search-button .search-box-input {
   position: absolute;
@@ -106,9 +160,27 @@ header .search-button button {
     height: 30px;
     width: 30px;
   }
+
+  header .right-div .drop-down-div .profile-button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .dropdown .MuiPaper-root {
+    top: 83px;
+    left: 1169px;
+  }
+
+  .dropdown .MuiPaper-root li {
+    color: #6e297b;
+    border-bottom: 1px solid #80008042;
+    padding: 0 20px;
+  }
+
   header .search-button button svg {
     width: 20px;
   }
+
   header .search-button .search-box-input input {
     padding: 6px 15px;
   }
@@ -123,5 +195,11 @@ header .search-button button {
   }
   header .search-box.active {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header .right-div {
+    justify-content: flex-start;
   }
 }

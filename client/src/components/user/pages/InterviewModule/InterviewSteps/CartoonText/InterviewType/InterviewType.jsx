@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import cartoonInterview from "../../../../../../../assets/interviewModule/cartoonInterview.gif";
-import { Grid } from "@mui/material";
+import interview from "../../../../../../../assets/interviewModule/cartoon.png";
+import { Grid, Checkbox, SwipeableDrawer } from "@mui/material";
+import Disclaimer from "../../../../../partails/disclaimerDrawer";
 import { useHistory } from "react-router";
 import "./styles.scss";
+import { VolumeUpOutlined, VolumeOffOutlined } from "@mui/icons-material";
 import { TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import VideoCarousel from "../../../../../partails/videoCarousel/VideoCarousel";
@@ -19,26 +22,58 @@ const useStyles = makeStyles({
   },
 });
 
-const InterviewType = ({ title }) => {
+const InterviewType = ({ title, preview, setPreview }) => {
   const [textValue, setTextValue] = useState(
     "I'm a smart worker, one who sets goals and is constantly working towards his/her goals. I also understands the importance of unwinding and keeping a healthy mind."
   );
-
+  const [toggleState, setToggleState] = useState(false);
+  const [checkStatus, setCheckStatus] = useState(false);
+  const [checkError, setCheckError] = useState(false);
+  const [muteType, setMuteType] = useState(false);
+  // const [preview, setPreview] = useState(false);
   const history = useHistory();
   const handleChangeRoute = () => {
-    history.push("/thankyou");
+    if (!checkStatus) {
+      setCheckError(true);
+    } else if (checkStatus && !checkError) {
+      history.push("/thankyou");
+    }
   };
   return (
     <div className="interviewType-container">
       <div className="interview-body">
         <div className="interview-header">
           TYPE TEXT &amp; USE OUR CARTOON TEMPLATES
+          {preview ? (
+            muteType ? (
+              <span className="mute-button" onClick={() => setMuteType(false)}>
+                <VolumeUpOutlined />
+              </span>
+            ) : (
+              <span className="mute-button" onClick={() => setMuteType(true)}>
+                <VolumeOffOutlined />
+              </span>
+            )
+          ) : (
+            <></>
+          )}
         </div>
-        <div className="interview-type">INDIVIDUAL INTERVIEW</div>
+        {preview ? (
+          <div className="interview-type">
+            INDIVIDUAL INTERVIEW <span>{`>`}</span> PREVIEW
+          </div>
+        ) : (
+          <div className="interview-type">INDIVIDUAL INTERVIEW</div>
+        )}
+
         <Grid container>
           <Grid item md={10} xs={12}>
             <div className="cartoon-div">
-              <img src={cartoonInterview} alt="Interview type" />
+              {!preview ? (
+                <img src={interview} alt="Interview type" />
+              ) : (
+                <img src={cartoonInterview} alt="Interview type" />
+              )}
             </div>
           </Grid>
         </Grid>
@@ -70,13 +105,40 @@ const InterviewType = ({ title }) => {
         />
       </div>
       <div className="actions-div">
+        <div className="terms-conditions">
+          <div className="terms-div">
+            <Checkbox
+              onChange={() => {
+                setCheckStatus(!checkStatus);
+                setCheckError(false);
+              }}
+              className={`${checkError ? `error` : ``}`}
+              checked={checkStatus}
+            />
+            <div className="agreement-div">
+              I agree to have read the -{" "}
+              <span onClick={() => setToggleState(!toggleState)}>
+                Disclaimer
+              </span>{" "}
+            </div>
+          </div>
+          {checkError ? (
+            <div className="error-span">
+              Please read and accept the disclaimer checkbox
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
         <Grid container>
           <Grid item md={4}>
-            <button className="action-button">PREVIEW</button>
+            <button className="action-button" onClick={() => setPreview(true)}>
+              PREVIEW
+            </button>
           </Grid>
           <Grid item md={4}>
             <button className="action-button" onClick={handleChangeRoute}>
-              UPLOAD THIS RESPOSE
+              UPLOAD THIS RESPONSE
             </button>
           </Grid>
         </Grid>
@@ -84,6 +146,15 @@ const InterviewType = ({ title }) => {
       <div className="saved-jadu-container">
         <VideoCarousel title="My Saved Jadu's" />
       </div>
+      {toggleState && (
+        <Disclaimer
+          checkStatus={checkStatus}
+          setCheckStatus={setCheckStatus}
+          toggleState={toggleState}
+          setToggleState={setToggleState}
+          setCheckError={setCheckError}
+        />
+      )}
     </div>
   );
 };

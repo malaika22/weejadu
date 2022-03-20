@@ -140,7 +140,7 @@ const InterviewModule = () => {
 
   return (
     <div className="interview-home-container bg-wrapper-2">
-      <Header image="true" arrow="true" link="/start" />
+      <Header image="true" arrow="true" link="/home" />
       <div className="interview-container">
         <div className="interview-header">
           <div className="jadu-title">

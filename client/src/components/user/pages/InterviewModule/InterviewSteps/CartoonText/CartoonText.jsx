@@ -17,7 +17,12 @@ import "./styles.scss";
 import InterviewType from "./InterviewType/InterviewType";
 import VideoCarousel from "../../../../partails/videoCarousel/VideoCarousel";
 
-const CartoonText = ({ interviewType, setInterviewType }) => {
+const CartoonText = ({
+  interviewType,
+  setInterviewType,
+  preview,
+  setPreview,
+}) => {
   return (
     <div className="cartoon-text-container">
       {!interviewType ? (
@@ -81,7 +86,7 @@ const CartoonText = ({ interviewType, setInterviewType }) => {
           </div>
         </>
       ) : (
-        <InterviewType />
+        <InterviewType setPreview={setPreview} preview={preview} />
       )}
     </div>
   );

@@ -5,15 +5,24 @@
     border-radius: 30px;
     box-shadow: 1px 1px 8px 4px #80808085;
     .interview-header {
+      position: relative;
       font-size: 20px;
       color: #6f177b;
       font-weight: 700;
+      .mute-button {
+        cursor: pointer;
+        position: absolute;
+        right: 39px;
+      }
     }
     .interview-type {
       font-size: 18px;
       color: #a464df;
       margin: 15px;
       font-weight: 600;
+      span {
+        margin: 0 10px;
+      }
     }
     .cartoon-div {
       width: 500px;
@@ -61,6 +70,30 @@
         background-color: #6f177bbf;
         border: 1px solid #6f177bbf;
       }
+    }
+  }
+  .terms-conditions {
+    margin: 20px 0;
+    .terms-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .error {
+        svg {
+          color: #eb2e2e;
+        }
+      }
+      .agreement-div {
+        font-weight: 500;
+        color: #70167a;
+        span {
+          color: #fea01a;
+        }
+      }
+    }
+    .error-span {
+      font-size: 12px;
+      color: red;
     }
   }
 }
